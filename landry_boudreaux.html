@@ -165,12 +165,12 @@ header h2 {
   border: none;
   border-bottom: 3px solid transparent;
   margin-bottom: -2px;
-  color: rgba(44,26,8,0.5);
+  color: rgba(44,26,8,0.7);
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding: 1rem 1.4rem;
+  padding: 1rem 1.6rem;
   cursor: pointer;
   transition: all 0.25s;
   white-space: nowrap;
@@ -238,9 +238,9 @@ main {
 .section-header p {
   font-family: 'IM Fell English', serif;
   font-style: italic;
-  font-size: 1.05rem;
-  color: var(--parchment3);
-  opacity: 0.9;
+  font-size: 1.1rem;
+  color: var(--ink-mid);
+  opacity: 1;
 }
 
 /* CARDS */
@@ -248,7 +248,7 @@ main {
   background: linear-gradient(135deg, #fdf8ee 0%, #f5edd8 100%);
   border: 1px solid rgba(154,110,26,0.3);
   border-radius: 2px;
-  padding: 2rem 2.25rem;
+  padding: 2.25rem 2.75rem;
   box-shadow: 0 4px 24px rgba(80,40,10,0.1), inset 0 1px 0 rgba(255,255,255,0.7);
   backdrop-filter: blur(4px);
   position: relative;
@@ -264,17 +264,17 @@ main {
 }
 .intro-card h3 {
   font-family: 'Cinzel', serif;
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
   text-align: center;
 }
 .intro-card p {
-  font-size: 1.05rem;
-  line-height: 1.85;
-  color: var(--parchment2);
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--ink-mid);
 }
 .intro-card p + p { margin-top: 0.75rem; }
 
@@ -296,13 +296,13 @@ main {
 }
 .heritage-block h4 {
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 0.6rem;
 }
-.heritage-block p { font-size: 0.95rem; line-height: 1.65; color: var(--parchment2); }
+.heritage-block p { font-size: 1.05rem; line-height: 1.72; color: var(--ink-mid); }
 
 /* Wall banner */
 .wall-banner {
@@ -330,18 +330,18 @@ main {
 }
 .wall-banner h4 {
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #e8cc88;
   margin-bottom: 0.6rem;
 }
-.wall-banner p { font-size: 0.97rem; line-height: 1.7; color: #e8dcc0; opacity: 0.9; }
+.wall-banner p { font-size: 1.05rem; line-height: 1.75; color: #f0e8d0; opacity: 1; }
 .wall-banner .names {
   font-family: 'Cinzel Decorative', serif;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   color: #e8cc88;
-  margin: 0.6rem 0;
+  margin: 0.75rem 0;
   letter-spacing: 0.05em;
   filter: drop-shadow(0 0 8px rgba(200,168,74,0.4));
 }
@@ -350,32 +350,32 @@ main {
 .detail-row {
   display: flex;
   gap: 0.75rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.9rem;
   align-items: flex-start;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.65;
 }
 .detail-label {
   font-family: 'Cinzel', serif;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold);
-  min-width: 90px;
+  min-width: 100px;
   padding-top: 0.18rem;
   flex-shrink: 0;
 }
-.detail-value { color: var(--parchment2); }
+.detail-value { color: var(--ink-mid); }
 
 .detail-note {
   background: rgba(210,190,140,0.35);
   border-left: 3px solid var(--line-dim);
-  padding: 0.9rem 1.1rem;
+  padding: 1rem 1.25rem;
   font-family: 'IM Fell English', serif;
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--ink-mid);
-  line-height: 1.7;
+  line-height: 1.75;
   margin-top: 0.75rem;
   border-radius: 0 2px 2px 0;
 }
@@ -394,14 +394,14 @@ main {
   align-items: center;
   gap: 0.75rem;
   font-family: 'Cinzel', serif;
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--line-dim);
-  margin-bottom: 0.65rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.85rem;
   padding-left: 0.25rem;
 }
-.gen-label .fleur-sep { color: var(--gold); font-size: 0.8rem; }
+.gen-label .fleur-sep { color: var(--gold); font-size: 0.9rem; }
 .gen-label::after {
   content: '';
   flex: 1;
@@ -412,8 +412,9 @@ main {
 .person-cards-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-bottom: 0.5rem;
+  justify-content: center;
 }
 
 /* PERSON CARDS */
@@ -421,20 +422,21 @@ main {
   background: linear-gradient(135deg, #fdf8ee 0%, #f5edd8 100%);
   border: 1px solid rgba(154,110,26,0.25);
   border-radius: 2px;
-  padding: 1.1rem 1.3rem;
+  padding: 1.5rem 1.75rem 1.75rem;
   cursor: pointer;
   transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s, background 0.22s;
   position: relative;
-  min-width: 200px;
-  max-width: 310px;
-  flex: 1 1 220px;
+  min-width: 260px;
+  max-width: 360px;
+  flex: 1 1 280px;
   box-shadow: 2px 4px 14px rgba(80,40,10,0.1);
   overflow: hidden;
+  text-align: center;
 }
 .person-card::after {
   content: '\u269C';
-  position: absolute; bottom: 0.5rem; right: 0.75rem;
-  font-size: 0.65rem; color: var(--line-dim); opacity: 0.3;
+  position: absolute; bottom: 0.6rem; right: 0.9rem;
+  font-size: 0.75rem; color: var(--line-dim); opacity: 0.3;
   transition: opacity 0.22s;
 }
 .person-card:hover {
@@ -445,48 +447,49 @@ main {
 }
 .person-card:hover::after { opacity: 0.7; }
 
-.person-card.gold-accent { border-left: 3px solid var(--gold); }
-.person-card.teal-accent { border-left: 3px solid var(--cypress); }
-.person-card.rust-accent { border-left: 3px solid var(--rust-lt); }
+.person-card.gold-accent { border-left: 4px solid var(--gold); }
+.person-card.teal-accent { border-left: 4px solid var(--cypress); }
+.person-card.rust-accent { border-left: 4px solid var(--rust-lt); }
 .person-card.highlighted { border-color: var(--gold); box-shadow: 0 0 16px rgba(154,110,26,0.15); }
 
 .person-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--ink);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
   line-height: 1.25;
-  padding-right: 2.5rem;
+  padding-right: 0;
 }
 .person-dates {
   font-family: 'IM Fell English', serif;
   font-style: italic;
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   color: var(--ink-soft);
-  opacity: 0.8;
-  margin-bottom: 0.3rem;
-  line-height: 1.4;
+  opacity: 1;
+  margin-bottom: 0.4rem;
+  line-height: 1.45;
 }
 .person-location {
   font-family: 'Cinzel', serif;
-  font-size: 0.67rem;
+  font-size: 0.74rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--moss);
-  opacity: 0.9;
+  opacity: 1;
+  font-weight: 600;
 }
 
 /* Badges */
 .person-badge {
-  position: absolute; top: 0.6rem; right: 0.65rem;
+  display: inline-block;
+  margin-bottom: 0.6rem;
   font-family: 'Cinzel', serif;
-  font-size: 0.58rem;
+  font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.18rem 0.5rem;
+  padding: 0.22rem 0.65rem;
   border-radius: 1px;
-  z-index: 2;
 }
 .badge-patriarch { background: var(--rust); color: #fdf0e0; border: 1px solid rgba(168,69,42,0.3); }
 .badge-wall      { background: var(--moss); color: #e8f0e0; border: 1px solid rgba(74,124,89,0.3); }
@@ -528,13 +531,13 @@ main {
 }
 .connection-item h4 {
   font-family: 'Cinzel', serif;
-  font-size: 0.76rem;
+  font-size: 0.84rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 0.5rem;
 }
-.connection-item p { font-size: 1rem; line-height: 1.75; color: var(--parchment2); }
+.connection-item p { font-size: 1.05rem; line-height: 1.8; color: var(--ink-mid); }
 
 /* SOURCES */
 .sources-grid {
@@ -554,7 +557,7 @@ main {
 }
 .source-card h4 {
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--gold);
@@ -562,18 +565,18 @@ main {
   padding-bottom: 0.4rem;
   border-bottom: 1px solid rgba(154,110,26,0.18);
 }
-.source-card p { font-size: 0.9rem; line-height: 1.65; color: var(--parchment2); }
+.source-card p { font-size: 0.97rem; line-height: 1.7; color: var(--ink-mid); }
 
 .open-q-item { margin-bottom: 1.25rem; }
 .open-q-item .oq-title {
   font-family: 'Cinzel', serif;
-  font-size: 0.73rem;
+  font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--rust-lt);
   margin-bottom: 0.35rem;
 }
-.open-q-item p { font-size: 0.96rem; line-height: 1.72; color: var(--parchment2); }
+.open-q-item p { font-size: 1rem; line-height: 1.78; color: var(--ink-mid); }
 
 /* MODAL */
 .modal-overlay {
@@ -625,9 +628,9 @@ main {
 .modal-head .modal-dates {
   font-family: 'IM Fell English', serif;
   font-style: italic;
-  font-size: 0.97rem;
+  font-size: 1.05rem;
   color: var(--ink-mid);
-  opacity: 0.8;
+  opacity: 1;
 }
 .modal-close {
   position: absolute; top: 1rem; right: 1rem;
@@ -1267,8 +1270,10 @@ function badgeHtml(badge) {
 
 function buildCard(person, dataset, idx) {
   const cleanName = person.name.replace(' \u2605 Wall of Names','');
+  const badge = badgeHtml(person.badge);
+  const badgeRow = badge ? `<div style="margin-bottom:0.5rem;">${badge}</div>` : '';
   return `<div class="person-card ${person.accent}-accent${person.badge==='you'?' highlighted':''}" data-dataset="${dataset}" data-idx="${idx}">
-    ${badgeHtml(person.badge)}
+    ${badgeRow}
     <div class="person-name">${cleanName}</div>
     <div class="person-dates">${person.dates}</div>
     <div class="person-location">${person.location}</div>

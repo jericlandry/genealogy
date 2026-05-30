@@ -257,7 +257,7 @@
     flex-wrap: wrap;
     gap: 0.75rem;
     margin-bottom: 0.5rem;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   /* ── PERSON CARD ── */
@@ -306,9 +306,9 @@
     text-transform: uppercase;
   }
   .person-badge {
-    position: absolute;
-    top: 0.6rem; right: 0.75rem;
-    font-size: 0.65rem;
+    display: inline-block;
+    margin-top: 0.55rem;
+    font-size: 0.62rem;
     font-family: 'Cinzel', serif;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -507,7 +507,7 @@
   <div class="header-ornament">✦ ✦ ✦</div>
   <h1>Landry &amp; Boudreaux</h1>
   <h2>Family History of John Kenneth Landry</h2>
-  <div class="header-sub">Vermilion Parish, Louisiana · France · Acadia · 1600–Present</div>
+  <div class="header-sub">Vermilion Parish, Louisiana · France · Acadia · 1548–Present</div>
 </header>
 
 <nav class="tab-nav">
@@ -529,7 +529,7 @@
     <div class="heritage-grid">
       <div class="heritage-block">
         <h4>Mother's Line — Boudreaux</h4>
-        <p>Through your mother <strong>Lilies Boudreaux</strong>, you descend from <strong>Michel Boudrot</strong> (b. ~1600, La Rochelle, France) — the single ancestor from whom every Boudreaux/Boudreau in Louisiana descends. His family survived exile in Halifax before arriving in Louisiana in 1765 with the Beausoleil Broussard party. Going one generation further back, Michel's wife Michelle Aucoin was the daughter of <strong>Barbé Minguet</strong> (France) and Martin Aucoin — making Barbé your 12th-generation ancestor and the earliest known Boudreaux-line foremother.</p>
+        <p>Through your mother <strong>Lilies Boudreaux</strong>, you descend from <strong>Michel Boudrot</strong> (b. ~1600, La Rochelle, France) — the single ancestor from whom every Boudreaux/Boudreau in Louisiana descends. His family survived exile in Halifax before arriving in Louisiana in 1765 with the Beausoleil Broussard party. Going further back, Michel's wife Michelle Aucoin was the daughter of <strong>Barbé Minguet</strong> and <strong>Martin Aucoin II</strong> — and Martin's parents were <strong>Martin Aucoin I</strong> and <strong>Suzanne Barboteau</strong>, whose own parents <strong>Pierre Barbot Barboteau</strong> and <strong>Marie Réveillaud</strong> (b. ~1548, La Rochelle) are the earliest confirmed ancestors on this line, stretching the Boudreaux heritage to 15 documented generations.</p>
       </div>
       <div class="heritage-block">
         <h4>Father's Line — Landry</h4>
@@ -547,7 +547,7 @@
   <div class="intro-card" style="margin-top:1.5rem;">
     <h3>John Kenneth Landry</h3>
     <div class="detail-row"><span class="detail-label">Parents</span><span class="detail-value">John Henry Landry (father) &amp; Lilies Boudreaux (mother)</span></div>
-    <div class="detail-row"><span class="detail-label">Boudreaux</span><span class="detail-value">12 confirmed generations from Barbé Minguet &amp; Martin Aucoin, France, ~1590s — through Michel Boudrot (~1600) to the present</span></div>
+    <div class="detail-row"><span class="detail-label">Boudreaux</span><span class="detail-value">15 confirmed generations — from Pierre Barbot Barboteau &amp; Marie Réveillaud (La Rochelle, ~1548) through Barbé Minguet, Michel Boudrot (~1600), and the Acadian exile to Louisiana (1765)</span></div>
     <div class="detail-row"><span class="detail-label">Landry</span><span class="detail-value">From René Landry l'aîné, La Chaussée, France, ~1618</span></div>
     <div class="detail-row"><span class="detail-label">Both Lines</span><span class="detail-value">Survived Le Grand Dérangement of 1755 and settled in Vermilion Parish, Louisiana</span></div>
     <div class="detail-note">Use the tabs above to explore each family line, the confirmed family connections and cousin marriages, and the primary sources behind this research. Click any person card to read their full biography.</div>
@@ -558,7 +558,7 @@
 <div class="tab-panel" id="tab-boudreaux">
   <div class="tree-header">
     <h2>The Boudreaux Line</h2>
-    <p>Your Mother's Ancestors — 11 Generations, France to Vermilion Parish</p>
+    <p>Your Mother's Ancestors — 15 Generations, France (~1548) to Vermilion Parish · Generation 15 is the oldest, Generation 1 is your mother</p>
   </div>
   <p class="scroll-hint">Click any card to read full details</p>
   <div id="boudreaux-tree"></div>
@@ -619,25 +619,87 @@
 
 const boudreaux = [
   {
-    gen: 0, year: "~1590s",
-    name: "Barbé Minguet",
-    dates: "b. ~1590s, France · d. before ~1640, France (before Acadian emigration)",
-    location: "France (La Rochelle region)",
+    gen: 15, year: "~1548",
+    name: "Pierre Barbot Barboteau & Marie Catherine Réveillaud",
+    dates: "Pierre b. ~1548, La Rochelle · Marie b. ~1550, La Rochelle",
+    location: "La Rochelle, Charente-Maritime, France",
     badge: "ancestor",
     accent: "gold",
-    spouse: "Martin Aucoin (m. France)",
+    spouse: "Married ~1568, La Rochelle",
     fields: [
-      ["Born", "~1590s, France — likely the La Rochelle / Poitou region"],
-      ["Died", "Before ~1640, France — she had passed away before the Aucoin family emigrated to Acadia"],
-      ["Married", "Martin Aucoin, France"],
-      ["Daughter", "Michelle Aucoin (b. ~1618, near La Rochelle) — who emigrated to Port-Royal, Acadia ~1640"],
-      ["Generation", "12th generation ancestor of John Kenneth Landry on the Boudreaux line"],
-      ["Significance", "Maternal grandmother of every Boudreaux/Boudreau descendant in Louisiana"],
+      ["Pierre Barbot Barboteau", "Born ~1548, La Rochelle, Charente-Maritime, France"],
+      ["Marie Catherine Réveillaud", "Born ~1550, La Rochelle, Charente-Maritime, France"],
+      ["Married", "~1568, La Rochelle"],
+      ["Daughter", "Suzanne Barboteau — who married Martin Aucoin I (~1592) and became the grandmother of Martin Aucoin II (Barbé's husband)"],
+      ["Generation", "15th generation ancestors of John Kenneth Landry on the Boudreaux line (through Martin Aucoin's paternal line)"],
+      ["Source", "WikiTree: Barboteau-1; Geneanet (Alteirac family tree)"],
     ],
-    note: "Barbé Minguet is your earliest known Boudreaux-line ancestor. She and her husband Martin Aucoin had a daughter, Michelle, born near La Rochelle around 1618. Barbé died in France before the family emigrated — Michelle and her orphaned siblings arrived at Port-Royal, Acadia around 1640 with their widowed step-mother, Marie Sallé. Michelle then married Michel Boudrot (~1641), founding the entire Boudreaux line in Louisiana. Barbé Minguet does not appear again in Acadian or Louisiana records, but as Michelle's mother she is the 12th-generation maternal grandmother of every Louisiana Boudreaux descendant."
+    note: "Pierre Barbot Barboteau and Marie Catherine Réveillaud are the earliest currently identified ancestors on Martin Aucoin's paternal side. Their daughter Suzanne Barboteau married Martin Aucoin I (the locksmith of La Rochelle), and their grandson was Martin Aucoin II — the carpenter who married Barbé Minguet and fathered Michelle Aucoin, wife of the Boudreaux patriarch Michel Boudrot."
   },
   {
-    gen: 1, year: "~1600",
+    gen: 14, year: "~1570",
+    name: "Martin Aucoin I & Suzanne Barboteau",
+    dates: "Martin b. ~1570, La Rochelle · Suzanne b. ~1570, St-Vivien-de-Pons, Charente-Maritime",
+    location: "La Rochelle, Charente-Maritime, France",
+    badge: "ancestor",
+    accent: "gold",
+    spouse: "Married ~1592, La Rochelle",
+    fields: [
+      ["Martin Aucoin I", "Born ~1570, La Rochelle — locksmith (serrurier) in the Cougnes parish, later St. Éloy parish"],
+      ["Suzanne Barboteau", "Born ~1570, St-Vivien-de-Pons — daughter of Pierre Barbot Barboteau and Marie Catherine Réveillaud"],
+      ["Married", "~1592, La Rochelle"],
+      ["Son", "Martin Aucoin II (b. April 26, 1595, baptized St. Pierre Laleu, La Rochelle) — who married Barbé Minguet ~1617"],
+      ["Other children", "Sébastien (b. 1593), François (b. 1599), Daniel (b. 1604) — all baptized in La Rochelle parishes"],
+      ["Surname note", "The Aucoin name appears in records as: Aucoing, Ancoing, Auconnois, Oguin, Angevin — possibly originating from the Angers region of France"],
+      ["Caveat", "Stephen White (DGFA) notes the link between Martin I's son and the Martin who married Barbé Minguet is strongly inferred but not yet formally proven in surviving documents"],
+      ["Generation", "14th generation ancestors of John Kenneth Landry"],
+      ["Source", "Geni.com; Geneanet; DNAeXplained (June 2024); WikiTree Aucoin-255"],
+    ],
+    note: "Martin Aucoin I was a locksmith who raised his family in the La Rochelle parishes of Cougnes and St. Éloy. His son Martin II (born 1595) grew up to become a carpenter, married Barbé Minguet around 1617, and had at least three children including Michelle Aucoin — who would emigrate to Acadia and become the wife of Michel Boudrot, the Boudreaux patriarch. The Aucoin surname is extremely rare, which strongly supports (though does not formally prove) that Martin II is the same person baptized as the son of Martin I and Suzanne Barboteau in 1595."
+  },
+  {
+    gen: 13, year: "~1595",
+    name: "Martin Aucoin II",
+    dates: "b. April 26, 1595, baptized St. Pierre Laleu, La Rochelle · d. after 1633, France",
+    location: "La Rochelle, Charente-Maritime, France",
+    badge: "ancestor",
+    accent: "gold",
+    spouse: "1st: Barbé Minguet (~1617) · 2nd: Marie Sallé (January 20, 1632, St-Barthélemy, La Rochelle)",
+    fields: [
+      ["Born", "April 26, 1595, baptized at St. Pierre Laleu, La Rochelle, France"],
+      ["Occupation", "Menuisier (carpenter / joiner)"],
+      ["1st Marriage", "Barbé Minguet, ~1617, La Rochelle — three known children: Michelle (~1618), Jeanne (b. Nov 26, 1630), Nicolas (d. infant, Jan 1632)"],
+      ["Barbé's death", "Barbé Minguet died ~1631, La Rochelle, shortly after Jeanne's baptism"],
+      ["2nd Marriage", "Marie Sallé, January 20, 1632, St-Barthélemy, La Rochelle — daughter of Denys Sallé and Françoise Arnaud"],
+      ["Survived", "The Siege of La Rochelle (1627–1628) — one of the most brutal sieges of the French religious wars, which killed thousands in the city"],
+      ["Daughters to Acadia", "Michelle emigrated to Acadia before 1642; Jeanne followed by mid-1640s, marrying François Girouard there ~1647. Marie Sallé (stepmother) also eventually went to Acadia and remarried there"],
+      ["Generation", "13th generation ancestor of John Kenneth Landry"],
+      ["Source", "Dictionnaire Généalogique des Familles Acadiennes (White, 1999); DNAeXplained (June 2024); WikiTree Aucoin-53"],
+    ],
+    note: "Martin Aucoin II lived through extraordinary upheaval. La Rochelle was a Huguenot stronghold, and the 1627–1628 siege by Cardinal Richelieu's forces killed an estimated two-thirds of the city's population of 27,000. Martin, Barbé, and their young daughter Michelle somehow survived. Barbé died around 1631, and Martin quickly remarried Marie Sallé. He is confirmed in La Rochelle documents in 1630 and 1632, but no record of him in Acadia has been found — it is possible his daughters emigrated after his death. His daughter Michelle Aucoin married Michel Boudrot around 1641 at Port-Royal, founding the entire Louisiana Boudreaux line."
+  },
+  {
+    gen: 12, year: "~1597–1600",
+    name: "Barbé Minguet",
+    dates: "b. ~1597–1600, La Rochelle, France · d. ~1631, La Rochelle (before Acadian emigration)",
+    location: "La Rochelle, Charente-Maritime, France",
+    badge: "ancestor",
+    accent: "gold",
+    spouse: "Martin Aucoin II (m. ~1617, La Rochelle)",
+    fields: [
+      ["Born", "~1597–1600, La Rochelle region, France — exact parish unknown"],
+      ["Died", "~1631, La Rochelle — shortly after the baptism of her daughter Jeanne (Nov 1630); her son Nicolas was buried January 1632 with her name left blank, suggesting she had already died"],
+      ["Married", "Martin Aucoin II, ~1617, La Rochelle — she was approximately 20 years old"],
+      ["Children", "Michelle Aucoin (b. ~1618) · Jeanne Aucoin (b. Nov 26, 1630) · Nicolas Aucoin (d. infant, Jan 1632)"],
+      ["DNA confirmation", "Mitochondrial DNA (Haplogroup H) of Michelle's and Jeanne's descendants has been tested and matches — confirming Barbé as the common mother of both Acadian founding sisters"],
+      ["Minguet parents (unconfirmed)", "One FamilySearch tree lists her parents as Bertrand Godet and Guillaume Minguette — but this is not yet document-sourced and should be treated as unverified"],
+      ["Generation", "12th generation ancestor of John Kenneth Landry"],
+      ["Source", "WikiTree Minguet-1; Geni.com; DGFA (White, 1999); DNAeXplained (June 2024)"],
+    ],
+    note: "Barbé Minguet married Martin Aucoin II around 1617 in La Rochelle — a city then under severe religious and political tension. She and Martin survived the catastrophic 1627–1628 Siege of La Rochelle together with their young daughter Michelle. Barbé died around 1631, never reaching Acadia. Her two daughters, Michelle and Jeanne, both emigrated and became founding mothers of Acadia — confirmed by matching mitochondrial DNA across their descendants to this day. Through Michelle's marriage to Michel Boudrot, Barbé Minguet is the 12th-generation maternal grandmother of every Louisiana Boudreaux/Boudreau descendant, including John Kenneth Landry."
+  },
+  {
+    gen: 11, year: "~1600",
     name: "Michel Boudrot",
     dates: "b. ~1600, Cougnes near La Rochelle, France · d. ~1688, Port-Royal, Acadia",
     location: "La Rochelle, France → Acadia",
@@ -654,7 +716,7 @@ const boudreaux = [
     note: "Michel came to Port-Royal in the late 1630s and married Michelle Aucoin around 1641. He served as one of Acadia's first syndics (similar to mayor), and in 1684 was appointed the King's representative for justice at Port-Royal. In August 1688 he gave up the post citing his 'great age' of 88. His wife Michelle lived until December 1706, age 85. He is the patriarch and sole founding ancestor of every Boudreaux/Boudreau in Louisiana."
   },
   {
-    gen: 2, year: "~1666",
+    gen: 10, year: "~1666",
     name: "François Boudrot",
     dates: "b. ~1666, Port-Royal · d. September 1733, Port-Royal",
     location: "Port-Royal, Acadia",
@@ -671,7 +733,7 @@ const boudreaux = [
     note: null
   },
   {
-    gen: 3, year: "early 1700s",
+    gen: 9, year: "early 1700s",
     name: "Michel Boudrot fils",
     dates: "Carried the line through the years leading to the Great Upheaval",
     location: "Port-Royal, Acadia",
@@ -679,13 +741,13 @@ const boudreaux = [
     accent: "gold",
     spouse: "—",
     fields: [
-      ["Generation", "3rd generation — son of François, grandson of Michel Boudrot"],
+      ["Generation", "9th generation from France — son of François, grandson of Michel Boudrot"],
       ["Role", "Carried the Boudreaux line through Acadia; his descendants would survive the Great Upheaval"],
     ],
     note: "Details for this generation are sparse in the record. His descendants faced the Acadian Expulsion of 1755."
   },
   {
-    gen: 4, year: "~1740",
+    gen: 8, year: "~1740",
     name: "Jean Boudrot",
     dates: "b. ~1740, Halifax exile · d. ~1768, Attakapas, Louisiana",
     location: "Halifax → Louisiana (1765)",
@@ -702,7 +764,7 @@ const boudreaux = [
     note: "Jean arrived in Louisiana in February 1765 with the famous Beausoleil Broussard party — one of the founding groups of Cajun Louisiana. He was 25 years old. Tragically Jean died at Attakapas around 1768, still in his late 20s. His widow Marguerite later married Simon LeBlanc. Jean-Charles dit Donat was his only child and carried on the entire Boudreaux line in south Louisiana."
   },
   {
-    gen: 5, year: "~1763",
+    gen: 7, year: "~1763",
     name: "Jean-Charles dit Donat Boudreaux",
     dates: "b. ~1763, Halifax or Boston · d. June 1807, Bayou Vermilion, Louisiana",
     location: "Halifax / Boston → Bayou Vermilion, Louisiana",
@@ -735,7 +797,7 @@ const boudreaux = [
     note: null
   },
   {
-    gen: 7, year: "1798",
+    gen: 5, year: "1798",
     name: "Philémon dit Edmond Boudreaux",
     dates: "b. April 1798, Attakapas · d. February 1853, Lafayette Parish",
     location: "Attakapas → Lafayette Parish",
@@ -752,7 +814,7 @@ const boudreaux = [
     note: "'Dit Edmond' means he was known by that name, explaining why his son was called Edmond fils. His wife's father, Jean-Baptiste Simon, arrived in Louisiana from France aboard the ship L'Amitié in 1785 — one of the Seven Ships that brought Acadian exiles back from France."
   },
   {
-    gen: 8, year: "~1837",
+    gen: 4, year: "~1837",
     name: "Edmond Boudreaux fils",
     dates: "b. ~1837, Lafayette Parish · d. 1918",
     location: "Lafayette Parish → Abbeville, Vermilion Parish",
@@ -770,7 +832,7 @@ const boudreaux = [
     note: null
   },
   {
-    gen: 9, year: "1860",
+    gen: 3, year: "1860",
     name: "Arthur J. Boudreaux",
     dates: "b. April 1860, Abbeville, Vermilion Parish",
     location: "Abbeville, Vermilion Parish",
@@ -788,7 +850,7 @@ const boudreaux = [
     note: null
   },
   {
-    gen: 10, year: "~1888–1895",
+    gen: 2, year: "~1888–1895",
     name: "Duprelie Francoise Boudreaux",
     dates: "b. ~1888–1895, Abbeville · d. ~1950–1965, Erath",
     location: "Abbeville → Erath, Louisiana",
@@ -808,7 +870,7 @@ const boudreaux = [
     note: "Azona's maiden name Landry suggests a connection to the same Landry family as your father — cousin marriage is likely but not yet confirmed from public records."
   },
   {
-    gen: "11 — Your Mother",
+    gen: "Generation 1 — Your Mother",
     year: null,
     name: "Lilies Boudreaux",
     dates: "Daughter of Duprelie Boudreaux & Azona Landry",
@@ -828,7 +890,7 @@ const boudreaux = [
 ];
 
 const learly = {
-  gen: "11 (Branch)",
+  gen: "1 (Branch)",
   year: "1920–2019",
   name: "Learly 'L.F.' Francoise Boudreaux",
   dates: "b. December 7, 1920, Abbeville · d. November 28, 2019, Lafayette",
@@ -1141,10 +1203,10 @@ function buildCard(person, idx) {
   return `
     <div class="person-card ${person.accent}-accent ${person.badge==='you'?'highlighted':''}"
          onclick="showPerson(${idx}, '${person.name.replace(/'/g,"\\'")}')">
-      ${badgeHtml(person.badge)}
       <div class="person-name">${person.name.replace(' ★ Wall of Names','')}</div>
       <div class="person-dates">${person.dates}</div>
       <div class="person-location">${person.location}</div>
+      ${badgeHtml(person.badge)}
     </div>`;
 }
 
@@ -1158,7 +1220,8 @@ function renderTree(containerId, people, extra) {
     if (genStr !== lastGen) {
       if (lastGen !== null) html += `</div><div class="connector-down"></div>`;
       const yearLabel = p.year ? `· ${p.year}` : '';
-      html += `<div class="generation"><div class="gen-label">Generation ${genStr} ${yearLabel}</div><div class="person-cards-row">`;
+      const genDisplay = typeof p.gen === 'number' ? `Generation ${p.gen}` : p.gen;
+      html += `<div class="generation"><div class="gen-label">${genDisplay} ${yearLabel}</div><div class="person-cards-row">`;
       lastGen = genStr;
     }
     html += buildCard(p, i);

@@ -3,824 +3,610 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Landry &amp; Boudreaux — Family History</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<title>Landry & Boudreaux Family History</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 <style>
-/* =====================================================
-   CAJUN / FRENCH CREOLE DESIGN SYSTEM
-   Warm parchment palette · wrought-iron filigree · fleur-de-lis
-===================================================== */
-:root {
-  --bayou:       #f5efe0;
-  --bayou-mid:   #ede3cc;
-  --bayou-soft:  #e4d8bb;
-  --moss:        #3a6647;
-  --cypress:     #4a7c59;
-  --sage:        #3d6b4a;
-  --parchment:   #2c1a08;
-  --parchment2:  #3d2810;
-  --parchment3:  #5a3d18;
-  --cream:       #fdf8ee;
-  --gold:        #9a6e1a;
-  --gold-lt:     #7a5210;
-  --gold-dim:    #b8900a;
-  --rust:        #8b2f10;
-  --rust-lt:     #a83820;
-  --ink:         #1a0f05;
-  --ink-mid:     #3d2010;
-  --ink-soft:    #5a3818;
-  --line:        #c4a050;
-  --line-dim:    #9a7830;
-  --shadow:      rgba(60,30,10,0.12);
-}
+  :root {
+    --parchment: #f5edd8;
+    --parchment-dark: #e8d9b8;
+    --ink: #2c1a0e;
+    --ink-light: #5a3a22;
+    --rust: #8b3a1a;
+    --gold: #b8860b;
+    --gold-light: #d4a843;
+    --teal: #2a6b6e;
+    --teal-light: #3d9da1;
+    --cream: #fdf6e3;
+    --shadow: rgba(44,26,14,0.18);
+    --line: #c4a97d;
+  }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body {
-  background-color: var(--bayou);
-  background-image:
-    radial-gradient(ellipse 120% 60% at 50% 0%, #ede3cc 0%, transparent 60%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  color: var(--parchment);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+  body {
+    background: var(--parchment);
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    font-family: 'EB Garamond', Georgia, serif;
+    color: var(--ink);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-body::before {
-  content: '';
-  position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(154,110,26,0.06) 79px, rgba(154,110,26,0.06) 80px),
-    repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(154,110,26,0.06) 79px, rgba(154,110,26,0.06) 80px);
-}
+  /* ── HEADER ── */
+  header {
+    background: var(--ink);
+    background-image: linear-gradient(135deg, #1a0a04 0%, #2c1a0e 50%, #1a0a04 100%);
+    color: var(--parchment);
+    padding: 3rem 2rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      45deg, transparent, transparent 40px,
+      rgba(184,134,11,0.04) 40px, rgba(184,134,11,0.04) 80px
+    );
+  }
+  header::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+  }
 
-/* HEADER */
-header {
-  position: relative;
-  background: linear-gradient(180deg, #d4c49a 0%, #e8d9b8 50%, var(--bayou) 100%);
-  text-align: center;
-  padding: 3.5rem 2rem 3rem;
-  overflow: hidden;
-  border-bottom: 2px solid var(--line-dim);
-}
-header::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(184,144,10,0.15) 0%, transparent 70%);
-  pointer-events: none;
-}
+  .header-ornament {
+    font-size: 1.4rem;
+    color: var(--gold);
+    letter-spacing: 0.5rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
+  }
+  header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 5vw, 3.2rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--parchment);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gold-light);
+    letter-spacing: 0.03em;
+    margin-bottom: 0.5rem;
+  }
+  .header-sub {
+    font-size: 0.875rem;
+    color: rgba(245,237,216,0.55);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+  }
 
-.header-fleur-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-.header-fleur {
-  font-size: 1.6rem;
-  color: var(--gold);
-  opacity: 0.75;
-  line-height: 1;
-  animation: breathe 4s ease-in-out infinite;
-}
-.header-rule {
-  flex: 1;
-  max-width: 180px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  opacity: 0.5;
-}
-@keyframes breathe {
-  0%,100% { opacity: 0.7; transform: scale(1); }
-  50%      { opacity: 1; transform: scale(1.08); }
-}
+  /* ── NAV TABS ── */
+  .tab-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: var(--ink-light);
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    border-bottom: 3px solid var(--gold);
+  }
+  .tab-btn {
+    background: none;
+    border: none;
+    color: rgba(245,237,216,0.65);
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.9rem 1.4rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+    white-space: nowrap;
+  }
+  .tab-btn:hover { color: var(--gold-light); }
+  .tab-btn.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+    background: rgba(184,134,11,0.08);
+  }
 
-.header-eyebrow {
-  font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  opacity: 0.8;
-  margin-bottom: 0.75rem;
-}
+  /* ── MAIN ── */
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+  }
 
-header h1 {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: clamp(2rem, 6vw, 3.8rem);
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  background: linear-gradient(180deg, #5a3810 0%, #8b5e18 50%, #6b4510 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.05;
-  margin-bottom: 0.5rem;
-  filter: drop-shadow(0 1px 4px rgba(100,60,10,0.2));
-}
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; animation: fadeIn 0.35s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
-header h2 {
-  font-family: 'IM Fell English', serif;
-  font-style: italic;
-  font-size: clamp(1rem, 2.5vw, 1.35rem);
-  color: var(--ink-mid);
-  letter-spacing: 0.02em;
-  margin-bottom: 0.6rem;
-  opacity: 0.85;
-}
+  /* ── INTRO PANEL ── */
+  .intro-card {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 2.5rem 3rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 24px var(--shadow);
+    position: relative;
+  }
+  .intro-card::before {
+    content: '';
+    position: absolute; top: 8px; left: 8px; right: 8px; bottom: 8px;
+    border: 1px solid rgba(184,134,11,0.2);
+    pointer-events: none;
+  }
+  .intro-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: var(--rust);
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .intro-card p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: var(--ink-light);
+    margin-bottom: 0.75rem;
+  }
+  .intro-card p:last-child { margin-bottom: 0; }
 
-.header-location {
-  font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--moss);
-  opacity: 0.85;
-}
+  .heritage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: 600px) { .heritage-grid { grid-template-columns: 1fr; } }
 
-.header-border {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, transparent 0%, var(--gold-dim) 20%, var(--gold) 50%, var(--gold-dim) 80%, transparent 100%);
-}
+  .heritage-block {
+    background: var(--parchment-dark);
+    border-left: 4px solid var(--gold);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 2px 2px 0;
+  }
+  .heritage-block h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 0.5rem;
+  }
+  .heritage-block p { font-size: 0.95rem; line-height: 1.6; color: var(--ink); }
 
-/* NAV */
-.tab-nav {
-  position: sticky; top: 0; z-index: 100;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background: linear-gradient(180deg, #e8d9b8 0%, #ddd0a8 100%);
-  border-bottom: 2px solid var(--line-dim);
-  padding: 0 0.5rem;
-  box-shadow: 0 4px 16px rgba(80,40,10,0.1);
-}
+  .wall-of-names {
+    background: linear-gradient(135deg, #1e3a3c, #2a6b6e);
+    color: var(--parchment);
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    margin-top: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(42,107,110,0.35);
+  }
+  .wall-of-names h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 0.6rem;
+  }
+  .wall-of-names p { font-size: 0.95rem; line-height: 1.7; opacity: 0.9; }
+  .wall-of-names .names { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; color: var(--gold-light); margin: 0.5rem 0; }
 
-.tab-btn {
-  background: none;
-  border: none;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -2px;
-  color: rgba(44,26,8,0.7);
-  font-family: 'Cinzel', serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  padding: 1rem 1.6rem;
-  cursor: pointer;
-  transition: all 0.25s;
-  white-space: nowrap;
-  position: relative;
-}
-.tab-btn::after {
-  content: '';
-  position: absolute;
-  bottom: 0.25rem; left: 50%;
-  transform: translateX(-50%) scale(0);
-  font-size: 0.5rem;
-  color: var(--gold);
-  transition: transform 0.25s;
-}
-.tab-btn:hover { color: var(--gold); background: rgba(154,110,26,0.08); }
-.tab-btn.active {
-  color: var(--gold);
-  border-bottom-color: var(--gold);
-  background: rgba(154,110,26,0.1);
-}
+  /* ── TREE PANELS ── */
+  .tree-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem 1rem 1rem;
+    border-bottom: 2px solid var(--line);
+  }
+  .tree-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    color: var(--ink);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.35rem;
+  }
+  .tree-header p {
+    font-style: italic;
+    color: var(--ink-light);
+    font-size: 1rem;
+  }
 
-/* MAIN */
-main {
-  position: relative; z-index: 1;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 2.5rem 1.25rem 5rem;
-}
+  /* ── GENERATION LAYOUT ── */
+  .generation {
+    margin-bottom: 0.5rem;
+  }
+  .gen-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+    padding-left: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .gen-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--line), transparent);
+  }
 
-.tab-panel { display: none; }
-.tab-panel.active { display: block; animation: fadeUp 0.4s ease both; }
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: none; }
-}
+  .person-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    justify-content: flex-start;
+  }
 
-/* SECTION HEADERS */
-.section-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.5rem;
-  position: relative;
-}
-.section-header::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 50%; transform: translateX(-50%);
-  width: 200px; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--line-dim), transparent);
-}
-.section-header h2 {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: clamp(1.3rem, 3vw, 2rem);
-  color: var(--gold);
-  letter-spacing: 0.06em;
-  margin-bottom: 0.5rem;
-}
-.section-header .ornament {
-  color: var(--line-dim);
-  font-size: 1.2rem;
-  letter-spacing: 0.6rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-.section-header p {
-  font-family: 'IM Fell English', serif;
-  font-style: italic;
-  font-size: 1.1rem;
-  color: var(--ink-mid);
-  opacity: 1;
-}
+  /* ── PERSON CARD ── */
+  .person-card {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.22s;
+    position: relative;
+    min-width: 200px;
+    max-width: 320px;
+    flex: 1 1 220px;
+    box-shadow: 2px 3px 12px var(--shadow);
+  }
+  .person-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 8px 28px var(--shadow);
+    border-color: var(--gold);
+  }
+  .person-card.highlighted { border-color: var(--gold); background: #fffcf0; }
+  .person-card.teal-accent { border-left: 4px solid var(--teal); }
+  .person-card.gold-accent { border-left: 4px solid var(--gold); }
+  .person-card.rust-accent { border-left: 4px solid var(--rust); }
 
-/* CARDS */
-.intro-card {
-  background: linear-gradient(135deg, #fdf8ee 0%, #f5edd8 100%);
-  border: 1px solid rgba(154,110,26,0.3);
-  border-radius: 2px;
-  padding: 2.25rem 2.75rem;
-  box-shadow: 0 4px 24px rgba(80,40,10,0.1), inset 0 1px 0 rgba(255,255,255,0.7);
-  backdrop-filter: blur(4px);
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-.intro-card::before {
-  content: '';
-  position: absolute;
-  top: 6px; left: 6px; right: 6px; bottom: 6px;
-  border: 1px solid rgba(154,110,26,0.15);
-  pointer-events: none;
-  border-radius: 1px;
-}
-.intro-card h3 {
-  font-family: 'Cinzel', serif;
-  font-size: 1rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.1rem;
-  text-align: center;
-}
-.intro-card p {
-  font-size: 1.15rem;
-  line-height: 1.9;
-  color: var(--ink-mid);
-}
-.intro-card p + p { margin-top: 0.75rem; }
+  .person-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+    line-height: 1.2;
+  }
+  .person-dates {
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    font-style: italic;
+    margin-bottom: 0.3rem;
+  }
+  .person-location {
+    font-size: 0.78rem;
+    color: var(--teal);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .person-badge {
+    position: absolute;
+    top: 0.6rem; right: 0.75rem;
+    font-size: 0.65rem;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 1px;
+  }
+  .badge-patriarch { background: var(--rust); color: white; }
+  .badge-wall { background: var(--teal); color: white; }
+  .badge-you { background: var(--gold); color: var(--ink); }
+  .badge-exile { background: #6b4c2a; color: white; }
+  .badge-ancestor { background: #4a2060; color: #f0e8ff; }
 
-/* Heritage grid */
-.heritage-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  margin-top: 1.75rem;
-}
-@media (max-width: 600px) { .heritage-grid { grid-template-columns: 1fr; } }
+  .connector-down {
+    width: 2px;
+    height: 28px;
+    background: linear-gradient(to bottom, var(--line), transparent);
+    margin: 0 0 0 1.5rem;
+  }
 
-.heritage-block {
-  background: rgba(230,215,180,0.5);
-  border: 1px solid rgba(154,110,26,0.25);
-  border-left: 3px solid var(--gold);
-  padding: 1.25rem 1.5rem;
-  border-radius: 0 2px 2px 0;
-}
-.heritage-block h4 {
-  font-family: 'Cinzel', serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.6rem;
-}
-.heritage-block p { font-size: 1.05rem; line-height: 1.72; color: var(--ink-mid); }
+  /* ── MODAL / DETAIL PANEL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(44,26,14,0.55);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    backdrop-filter: blur(2px);
+  }
+  .modal-overlay.open { display: flex; animation: overlayIn 0.2s ease; }
+  @keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
 
-/* Wall banner */
-.wall-banner {
-  margin-top: 1.75rem;
-  background: linear-gradient(135deg, #2a4a32 0%, #3a6040 60%, #2a4a32 100%);
-  border: 1px solid rgba(154,110,26,0.5);
-  border-radius: 2px;
-  padding: 1.5rem 3rem;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(40,70,40,0.2), inset 0 0 60px rgba(0,0,0,0.2);
-  position: relative;
-  overflow: hidden;
-}
-.wall-banner::before {
-  content: '\u26DC';
-  position: absolute; top: 50%; left: 1rem;
-  transform: translateY(-50%);
-  font-size: 2.5rem; color: #c8a84a; opacity: 0.25;
-}
-.wall-banner::after {
-  content: '\u26DC';
-  position: absolute; top: 50%; right: 1rem;
-  transform: translateY(-50%);
-  font-size: 2.5rem; color: #c8a84a; opacity: 0.25;
-}
-.wall-banner h4 {
-  font-family: 'Cinzel', serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #e8cc88;
-  margin-bottom: 0.6rem;
-}
-.wall-banner p { font-size: 1.05rem; line-height: 1.75; color: #f0e8d0; opacity: 1; }
-.wall-banner .names {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 1.3rem;
-  color: #e8cc88;
-  margin: 0.75rem 0;
-  letter-spacing: 0.05em;
-  filter: drop-shadow(0 0 8px rgba(200,168,74,0.4));
-}
+  .modal {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 0;
+    max-width: 580px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 80px rgba(44,26,14,0.4);
+    position: relative;
+    animation: modalIn 0.25s ease;
+  }
+  @keyframes modalIn { from { transform: scale(0.96) translateY(12px); opacity: 0; } to { transform: none; opacity: 1; } }
 
-/* Detail rows */
-.detail-row {
-  display: flex;
-  gap: 0.75rem;
-  margin-bottom: 0.9rem;
-  align-items: flex-start;
-  font-size: 1.05rem;
-  line-height: 1.65;
-}
-.detail-label {
-  font-family: 'Cinzel', serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gold);
-  min-width: 100px;
-  padding-top: 0.18rem;
-  flex-shrink: 0;
-}
-.detail-value { color: var(--ink-mid); }
+  .modal-head {
+    background: var(--ink);
+    background-image: linear-gradient(135deg, #1a0a04 0%, #2c1a0e 100%);
+    padding: 1.75rem 2rem 1.5rem;
+    position: sticky; top: 0;
+    z-index: 2;
+    border-bottom: 3px solid var(--gold);
+  }
+  .modal-head h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--parchment);
+    margin-bottom: 0.2rem;
+  }
+  .modal-head .modal-dates {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.95rem;
+    color: var(--gold-light);
+    font-style: italic;
+  }
+  .modal-close {
+    position: absolute; top: 1rem; right: 1rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--parchment);
+    font-size: 1.1rem;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; border-radius: 1px;
+    transition: background 0.2s;
+  }
+  .modal-close:hover { background: rgba(255,255,255,0.2); }
 
-.detail-note {
-  background: rgba(210,190,140,0.35);
-  border-left: 3px solid var(--line-dim);
-  padding: 1rem 1.25rem;
-  font-family: 'IM Fell English', serif;
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--ink-mid);
-  line-height: 1.75;
-  margin-top: 0.75rem;
-  border-radius: 0 2px 2px 0;
-}
+  .modal-body { padding: 1.75rem 2rem; }
 
-.detail-divider {
-  border: none;
-  border-top: 1px solid rgba(154,110,26,0.2);
-  margin: 1.25rem 0;
-}
+  .detail-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+    align-items: flex-start;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .detail-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rust);
+    min-width: 90px;
+    padding-top: 0.15rem;
+    flex-shrink: 0;
+  }
+  .detail-value { color: var(--ink-light); }
 
-/* GENERATION TREE */
-.generation { margin-bottom: 0.25rem; }
+  .detail-divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 1.25rem 0;
+  }
 
-.gen-label {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-family: 'Cinzel', serif;
-  font-size: 0.76rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  margin-bottom: 0.85rem;
-  padding-left: 0.25rem;
-}
-.gen-label .fleur-sep { color: var(--gold); font-size: 0.9rem; }
-.gen-label::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(154,110,26,0.35), transparent);
-}
+  .detail-note {
+    background: var(--parchment-dark);
+    border-left: 3px solid var(--gold);
+    padding: 0.9rem 1.1rem;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.65;
+    margin-top: 0.5rem;
+  }
 
-.person-cards-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-  justify-content: center;
-}
+  .wall-badge-modal {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--teal);
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 1px;
+    margin-top: 0.75rem;
+  }
 
-/* PERSON CARDS */
-.person-card {
-  background: linear-gradient(135deg, #fdf8ee 0%, #f5edd8 100%);
-  border: 1px solid rgba(154,110,26,0.25);
-  border-radius: 2px;
-  padding: 1.5rem 1.75rem 1.75rem;
-  cursor: pointer;
-  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s, background 0.22s;
-  position: relative;
-  min-width: 260px;
-  max-width: 360px;
-  flex: 1 1 280px;
-  box-shadow: 2px 4px 14px rgba(80,40,10,0.1);
-  overflow: hidden;
-  text-align: center;
-}
-.person-card::after {
-  content: '\u269C';
-  position: absolute; bottom: 0.6rem; right: 0.9rem;
-  font-size: 0.75rem; color: var(--line-dim); opacity: 0.3;
-  transition: opacity 0.22s;
-}
-.person-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(80,40,10,0.18), 0 0 16px rgba(154,110,26,0.1);
-  border-color: rgba(154,110,26,0.5);
-  background: linear-gradient(135deg, #ffffff 0%, #fdf5e0 100%);
-}
-.person-card:hover::after { opacity: 0.7; }
+  /* ── CONNECTIONS PANEL ── */
+  .connections-list { display: flex; flex-direction: column; gap: 1.25rem; }
+  .connection-item {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 2px 3px 12px var(--shadow);
+  }
+  .connection-item h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 0.5rem;
+  }
+  .connection-item p { font-size: 0.98rem; line-height: 1.7; color: var(--ink-light); }
 
-.person-card.gold-accent { border-left: 4px solid var(--gold); }
-.person-card.teal-accent { border-left: 4px solid var(--cypress); }
-.person-card.rust-accent { border-left: 4px solid var(--rust-lt); }
-.person-card.highlighted { border-color: var(--gold); box-shadow: 0 0 16px rgba(154,110,26,0.15); }
+  /* ── SOURCES PANEL ── */
+  .sources-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 640px) { .sources-grid { grid-template-columns: 1fr; } }
+  .source-card {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 1.1rem 1.25rem;
+    box-shadow: 2px 3px 10px var(--shadow);
+  }
+  .source-card h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .source-card p { font-size: 0.9rem; line-height: 1.6; color: var(--ink-light); }
 
-.person-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 0.4rem;
-  line-height: 1.25;
-  padding-right: 0;
-}
-.person-dates {
-  font-family: 'IM Fell English', serif;
-  font-style: italic;
-  font-size: 0.95rem;
-  color: var(--ink-soft);
-  opacity: 1;
-  margin-bottom: 0.4rem;
-  line-height: 1.45;
-}
-.person-location {
-  font-family: 'Cinzel', serif;
-  font-size: 0.74rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--moss);
-  opacity: 1;
-  font-weight: 600;
-}
+  /* ── RESPONSIVE ── */
+  @media (max-width: 500px) {
+    .intro-card { padding: 1.5rem 1.25rem; }
+    .modal-body { padding: 1.25rem 1.25rem; }
+    .person-card { flex-basis: 100%; }
+  }
 
-/* Badges */
-.person-badge {
-  display: inline-block;
-  margin-bottom: 0.6rem;
-  font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.22rem 0.65rem;
-  border-radius: 1px;
-}
-.badge-patriarch { background: var(--rust); color: #fdf0e0; border: 1px solid rgba(168,69,42,0.3); }
-.badge-wall      { background: var(--moss); color: #e8f0e0; border: 1px solid rgba(74,124,89,0.3); }
-.badge-you       { background: var(--gold); color: #fff8ee; border: 1px solid rgba(154,110,26,0.4); }
-.badge-exile     { background: #6b3a18; color: #f0d8b8; border: 1px solid rgba(107,58,24,0.4); }
-
-.connector-down {
-  width: 2px; height: 26px;
-  background: linear-gradient(to bottom, rgba(154,110,26,0.4), transparent);
-  margin: 0 0 0 1.75rem;
-}
-
-.scroll-hint {
-  font-family: 'IM Fell English', serif;
-  font-style: italic;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--ink-soft);
-  opacity: 0.5;
-  margin-bottom: 1.5rem;
-}
-
-/* CONNECTIONS */
-.connections-list { display: flex; flex-direction: column; gap: 1.1rem; }
-.connection-item {
-  background: linear-gradient(135deg, #fdf8ee 0%, #f5edd8 100%);
-  border: 1px solid rgba(154,110,26,0.22);
-  border-radius: 2px;
-  padding: 1.25rem 1.5rem 1.25rem 2.25rem;
-  box-shadow: 2px 4px 12px rgba(80,40,10,0.08);
-  position: relative;
-}
-.connection-item::before {
-  content: 'X';
-  font-family: 'Cinzel', serif;
-  font-size: 0.9rem;
-  position: absolute; left: 0.8rem; top: 1.2rem;
-  color: var(--line-dim); opacity: 0.55;
-}
-.connection-item h4 {
-  font-family: 'Cinzel', serif;
-  font-size: 0.84rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-}
-.connection-item p { font-size: 1.05rem; line-height: 1.8; color: var(--ink-mid); }
-
-/* SOURCES */
-.sources-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-@media (max-width: 640px) { .sources-grid { grid-template-columns: 1fr; } }
-
-.source-card {
-  background: linear-gradient(135deg, #fdf8ee 0%, #f5edd8 100%);
-  border: 1px solid rgba(154,110,26,0.2);
-  border-radius: 2px;
-  padding: 1.1rem 1.25rem;
-  box-shadow: 2px 4px 12px rgba(80,40,10,0.08);
-}
-.source-card h4 {
-  font-family: 'Cinzel', serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid rgba(154,110,26,0.18);
-}
-.source-card p { font-size: 0.97rem; line-height: 1.7; color: var(--ink-mid); }
-
-.open-q-item { margin-bottom: 1.25rem; }
-.open-q-item .oq-title {
-  font-family: 'Cinzel', serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--rust-lt);
-  margin-bottom: 0.35rem;
-}
-.open-q-item p { font-size: 1rem; line-height: 1.78; color: var(--ink-mid); }
-
-/* MODAL */
-.modal-overlay {
-  display: none;
-  position: fixed; inset: 0;
-  background: rgba(40,20,5,0.5);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  backdrop-filter: blur(4px);
-}
-.modal-overlay.open { display: flex; animation: overlayIn 0.2s ease; }
-@keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
-
-.modal {
-  background: linear-gradient(160deg, #fdf8ee 0%, #f0e6cc 100%);
-  border: 1px solid rgba(154,110,26,0.35);
-  border-radius: 2px;
-  max-width: 600px; width: 100%;
-  max-height: 88vh; overflow-y: auto;
-  box-shadow: 0 24px 80px rgba(60,30,5,0.25), 0 0 40px rgba(154,110,26,0.08);
-  position: relative;
-  animation: modalIn 0.3s ease;
-}
-@keyframes modalIn {
-  from { transform: scale(0.94) translateY(16px); opacity: 0; }
-  to   { transform: none; opacity: 1; }
-}
-.modal::before {
-  content: '';
-  position: absolute; top: 8px; left: 8px; right: 8px; bottom: 8px;
-  border: 1px solid rgba(154,110,26,0.12);
-  pointer-events: none; z-index: 0;
-}
-
-.modal-head {
-  background: linear-gradient(135deg, #e8d9b8 0%, #d6c898 100%);
-  padding: 1.75rem 2rem 1.5rem;
-  border-bottom: 1px solid rgba(154,110,26,0.3);
-  position: sticky; top: 0; z-index: 2;
-}
-.modal-head h2 {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 1.3rem;
-  color: var(--gold);
-  margin-bottom: 0.25rem;
-}
-.modal-head .modal-dates {
-  font-family: 'IM Fell English', serif;
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--ink-mid);
-  opacity: 1;
-}
-.modal-close {
-  position: absolute; top: 1rem; right: 1rem;
-  background: rgba(154,110,26,0.12);
-  border: 1px solid rgba(154,110,26,0.3);
-  color: var(--gold);
-  font-size: 1rem;
-  width: 30px; height: 30px;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; border-radius: 1px;
-  transition: background 0.2s, border-color 0.2s;
-  font-family: 'Cinzel', serif;
-}
-.modal-close:hover { background: rgba(154,110,26,0.22); border-color: var(--gold); }
-
-.modal-body { padding: 1.75rem 2rem; position: relative; z-index: 1; }
-
-.wall-badge-modal {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(58,102,71,0.15);
-  border: 1px solid rgba(74,124,89,0.4);
-  color: var(--moss);
-  font-family: 'Cinzel', serif;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 0.35rem 0.85rem;
-  border-radius: 1px;
-  margin-top: 0.85rem;
-}
-
-/* Floating particles */
-.bg-particle {
-  position: fixed;
-  width: 2px; height: 2px;
-  border-radius: 50%;
-  background: var(--line-dim);
-  opacity: 0;
-  pointer-events: none;
-  animation: floatUp linear infinite;
-}
-@keyframes floatUp {
-  0%   { opacity: 0; transform: translateY(100vh) scale(0); }
-  10%  { opacity: 0.15; }
-  90%  { opacity: 0.07; }
-  100% { opacity: 0; transform: translateY(-10vh) scale(1.5); }
-}
-
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bayou-mid); }
-::-webkit-scrollbar-thumb { background: var(--line-dim); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--gold); }
-
-@media (max-width: 500px) {
-  .intro-card { padding: 1.25rem; }
-  .modal-body { padding: 1.25rem; }
-  .person-card { flex-basis: 100%; max-width: 100%; }
-  .modal-head h2 { font-size: 1.05rem; }
-  .wall-banner { padding: 1.25rem 1.5rem; }
-}
+  /* Scroll hint */
+  .scroll-hint {
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--ink-light);
+    opacity: 0.6;
+    margin-bottom: 1.25rem;
+  }
 </style>
 </head>
 <body>
 
-<div class="bg-particle" style="left:8%;animation-duration:18s;animation-delay:0s;"></div>
-<div class="bg-particle" style="left:23%;animation-duration:22s;animation-delay:3s;width:3px;height:3px;"></div>
-<div class="bg-particle" style="left:41%;animation-duration:15s;animation-delay:7s;"></div>
-<div class="bg-particle" style="left:67%;animation-duration:25s;animation-delay:1s;width:3px;height:3px;"></div>
-<div class="bg-particle" style="left:85%;animation-duration:19s;animation-delay:5s;"></div>
-<div class="bg-particle" style="left:55%;animation-duration:28s;animation-delay:9s;"></div>
-
 <header>
-  <div class="header-fleur-row">
-    <div class="header-rule"></div>
-    <div class="header-fleur">&#x269C;</div>
-    <div class="header-fleur" style="font-size:2.2rem;animation-delay:1s;">&#x269C;</div>
-    <div class="header-fleur" style="animation-delay:2s;">&#x269C;</div>
-    <div class="header-rule"></div>
-  </div>
-  <div class="header-eyebrow">Famille &nbsp;&middot;&nbsp; M&eacute;moire &nbsp;&middot;&nbsp; H&eacute;ritage</div>
+  <div class="header-ornament">✦ ✦ ✦</div>
   <h1>Landry &amp; Boudreaux</h1>
   <h2>Family History of John Kenneth Landry</h2>
-  <div class="header-location">Vermilion Parish, Louisiana &nbsp;&middot;&nbsp; France &nbsp;&middot;&nbsp; Acadia &nbsp;&middot;&nbsp; 1600&ndash;Present</div>
-  <div class="header-border"></div>
+  <div class="header-sub">Vermilion Parish, Louisiana · France · Acadia · 1600–Present</div>
 </header>
 
 <nav class="tab-nav">
-  <button class="tab-btn active" data-tab="intro">Introduction</button>
-  <button class="tab-btn" data-tab="boudreaux">Boudreaux Line</button>
-  <button class="tab-btn" data-tab="landry">Landry Line</button>
-  <button class="tab-btn" data-tab="connections">Connections</button>
-  <button class="tab-btn" data-tab="sources">Sources</button>
+  <button class="tab-btn active" onclick="showTab('intro')">Introduction</button>
+  <button class="tab-btn" onclick="showTab('boudreaux')">Boudreaux Line</button>
+  <button class="tab-btn" onclick="showTab('landry')">Landry Line</button>
+  <button class="tab-btn" onclick="showTab('connections')">Family Connections</button>
+  <button class="tab-btn" onclick="showTab('sources')">Sources</button>
 </nav>
 
 <main>
 
-<!-- INTRO -->
+<!-- ══════════════ INTRO ══════════════ -->
 <div class="tab-panel active" id="tab-intro">
   <div class="intro-card">
-    <h3>&#x269C; &nbsp;Votre H&eacute;ritage &nbsp;&middot;&nbsp; Your Heritage&nbsp; &#x269C;</h3>
-    <p>This family history records the genealogical research into the ancestors of <strong style="color:var(--gold)">John Kenneth Landry</strong>, son of John Henry Landry and Lilies Boudreaux. Both family lines are among the oldest and most deeply rooted Acadian families in Vermilion Parish, Louisiana &mdash; spanning over 400 years and 11+ confirmed generations, from France in the early 1600s to the present day.</p>
-    <p>Both lines survived <em>Le Grand D&eacute;rangement</em> of 1755 &mdash; the British expulsion of the Acadians &mdash; and made their way to south Louisiana, where they rebuilt their lives on the prairies and bayous of Vermilion Parish.</p>
+    <h3>Your Heritage at a Glance</h3>
+    <p>This family history records the genealogical research into the ancestors of <strong>John Kenneth Landry</strong>, son of John Henry Landry and Lilies Boudreaux. Both family lines are among the oldest and most deeply rooted Acadian families in Vermilion Parish, Louisiana — spanning over 400 years and 11+ confirmed generations, from France in the early 1600s to the present day.</p>
+    <p>Both lines survived <em>Le Grand Dérangement</em> of 1755 — the British expulsion of the Acadians — and made their way to south Louisiana, where they rebuilt their lives on the prairies and bayous of Vermilion Parish.</p>
     <div class="heritage-grid">
       <div class="heritage-block">
-        <h4>Ligne Maternelle &mdash; Boudreaux</h4>
-        <p>Through your mother <strong>Lilies Boudreaux</strong>, you descend from <strong>Michel Boudrot</strong> (b. ~1600, La Rochelle, France) &mdash; the single ancestor from whom every Boudreaux/Boudreau in Louisiana descends. His family survived exile in Halifax before arriving in Louisiana in 1765 with the Beausoleil Broussard party.</p>
+        <h4>Mother's Line — Boudreaux</h4>
+        <p>Through your mother <strong>Lilies Boudreaux</strong>, you descend from <strong>Michel Boudrot</strong> (b. ~1600, La Rochelle, France) — the single ancestor from whom every Boudreaux/Boudreau in Louisiana descends. His family survived exile in Halifax before arriving in Louisiana in 1765 with the Beausoleil Broussard party. Going one generation further back, Michel's wife Michelle Aucoin was the daughter of <strong>Barbé Minguet</strong> (France) and Martin Aucoin — making Barbé your 12th-generation ancestor and the earliest known Boudreaux-line foremother.</p>
       </div>
       <div class="heritage-block">
-        <h4>Ligne Paternelle &mdash; Landry</h4>
-        <p>Through your father <strong>John Henry Landry</strong>, you descend from <strong>Ren&eacute; Landry l&rsquo;a&icirc;n&eacute;</strong> (b. ~1618, La Chauss&eacute;e, France) &mdash; one of the founding families of Acadia. After exile in Maryland during Le Grand D&eacute;rangement, the family arrived in Louisiana around 1769.</p>
+        <h4>Father's Line — Landry</h4>
+        <p>Through your father <strong>John Henry Landry</strong>, you descend from <strong>René Landry l'aîné</strong> (b. ~1618, La Chaussée, France) — one of the founding families of Acadia. After exile in Maryland during Le Grand Dérangement, the family arrived in Louisiana around 1769.</p>
       </div>
     </div>
-    <div class="wall-banner">
-      <h4>&#x2605; Wall of Names &mdash; Acadian Memorial, St. Martinville, Louisiana &#x2605;</h4>
+    <div class="wall-of-names">
+      <h4>★ Wall of Names — Acadian Memorial, St. Martinville, Louisiana</h4>
       <p>Two of your direct ancestors are honored on the bronze Wall of Names:</p>
-      <div class="names">Abraham Landry &nbsp;&#x269C;&nbsp; Pierre &ldquo;Pierrot &agrave; Jacques&rdquo; Landry</div>
-      <p style="font-size:0.82rem;opacity:0.65;margin-top:0.5rem;">121 S. New Market St., St. Martinville, LA 70582 &nbsp;&middot;&nbsp; (337) 394-2258 &nbsp;&middot;&nbsp; Visitors may make rubbings of the names.</p>
-      <a href="https://www.acadianmemorial.org" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:0.85rem;font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#e8cc88;border:1px solid rgba(232,204,136,0.45);padding:0.38rem 1.1rem;border-radius:1px;text-decoration:none;transition:background 0.2s,border-color 0.2s;" onmouseover="this.style.background='rgba(232,204,136,0.12)';this.style.borderColor='rgba(232,204,136,0.75)'" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(232,204,136,0.45)'">&#x2605; &nbsp;Visit acadianmemorial.org &nbsp;&#x2192;</a>
+      <div class="names">Abraham Landry &nbsp;·&nbsp; Pierre "Pierrot à Jacques" Landry</div>
+      <p style="font-size:0.85rem; opacity:0.75; margin-top:0.5rem;">121 S. New Market St., St. Martinville, LA 70582 · (337) 394-2258 · Visitors may make rubbings of the names.</p>
     </div>
   </div>
 
-  <div class="intro-card">
-    <h3>&#x269C; &nbsp;John Kenneth Landry&nbsp; &#x269C;</h3>
-    <div class="detail-row"><span class="detail-label">Parents</span><span class="detail-value">John Henry Landry (p&egrave;re) &amp; Lilies Boudreaux (m&egrave;re)</span></div>
-    <div class="detail-row"><span class="detail-label">Boudreaux</span><span class="detail-value">11 confirmed generations from Michel Boudrot, La Rochelle, France, ~1600</span></div>
-    <div class="detail-row"><span class="detail-label">Landry</span><span class="detail-value">From Ren&eacute; Landry l&rsquo;a&icirc;n&eacute;, La Chauss&eacute;e, France, ~1618</span></div>
-    <div class="detail-row"><span class="detail-label">Les Deux</span><span class="detail-value">Both lines survived Le Grand D&eacute;rangement of 1755 and settled in Vermilion Parish, Louisiana</span></div>
+  <div class="intro-card" style="margin-top:1.5rem;">
+    <h3>John Kenneth Landry</h3>
+    <div class="detail-row"><span class="detail-label">Parents</span><span class="detail-value">John Henry Landry (father) &amp; Lilies Boudreaux (mother)</span></div>
+    <div class="detail-row"><span class="detail-label">Boudreaux</span><span class="detail-value">12 confirmed generations from Barbé Minguet &amp; Martin Aucoin, France, ~1590s — through Michel Boudrot (~1600) to the present</span></div>
+    <div class="detail-row"><span class="detail-label">Landry</span><span class="detail-value">From René Landry l'aîné, La Chaussée, France, ~1618</span></div>
+    <div class="detail-row"><span class="detail-label">Both Lines</span><span class="detail-value">Survived Le Grand Dérangement of 1755 and settled in Vermilion Parish, Louisiana</span></div>
     <div class="detail-note">Use the tabs above to explore each family line, the confirmed family connections and cousin marriages, and the primary sources behind this research. Click any person card to read their full biography.</div>
   </div>
 </div>
 
-<!-- BOUDREAUX LINE -->
+<!-- ══════════════ BOUDREAUX LINE ══════════════ -->
 <div class="tab-panel" id="tab-boudreaux">
-  <div class="section-header">
-    <span class="ornament">&#x269C; &nbsp; &#x269C; &nbsp; &#x269C;</span>
-    <h2>La Famille Boudreaux</h2>
-    <p>Your Mother's Ancestors &mdash; 11 Generations, France to Vermilion Parish</p>
+  <div class="tree-header">
+    <h2>The Boudreaux Line</h2>
+    <p>Your Mother's Ancestors — 11 Generations, France to Vermilion Parish</p>
   </div>
-  <p class="scroll-hint">Cliquez sur any card to read full details</p>
+  <p class="scroll-hint">Click any card to read full details</p>
   <div id="boudreaux-tree"></div>
 </div>
 
-<!-- LANDRY LINE -->
+<!-- ══════════════ LANDRY LINE ══════════════ -->
 <div class="tab-panel" id="tab-landry">
-  <div class="section-header">
-    <span class="ornament">&#x269C; &nbsp; &#x269C; &nbsp; &#x269C;</span>
-    <h2>La Famille Landry</h2>
-    <p>Your Father's Ancestors &mdash; 11+ Generations, France to Vermilion Parish</p>
+  <div class="tree-header">
+    <h2>The Landry Line</h2>
+    <p>Your Father's Ancestors — 11+ Generations, France to Vermilion Parish</p>
   </div>
-  <p class="scroll-hint">Cliquez sur any card to read full details</p>
+  <p class="scroll-hint">Click any card to read full details</p>
   <div id="landry-tree"></div>
 </div>
 
-<!-- CONNECTIONS -->
+<!-- ══════════════ CONNECTIONS ══════════════ -->
 <div class="tab-panel" id="tab-connections">
-  <div class="section-header">
-    <span class="ornament">&#x269C; &nbsp; &#x269C; &nbsp; &#x269C;</span>
-    <h2>Connexions de Famille</h2>
+  <div class="tree-header">
+    <h2>Cousin Marriages &amp; Family Connections</h2>
     <p>How the Acadian families of Vermilion Parish intertwined across generations</p>
   </div>
   <div class="intro-card" style="margin-bottom:1.5rem;">
-    <p>Cousin marriages were the norm rather than the exception in Cajun south Louisiana. The Acadian exile of 1755 scattered a population of roughly 10,000&ndash;14,000 people. Those who reached Louisiana settled in tight communities along the same bayous, attended the same Catholic churches, and grew up together. Marriage records from the era frequently include <em>&ldquo;dispensation for third degree of consanguinity&rdquo;</em> &mdash; because the Church had formal procedures for cousin marriages, they were so routine.</p>
-    <p>Genealogists call this <strong style="color:var(--gold)">&ldquo;pedigree collapse&rdquo;</strong> &mdash; the family tree folds back on itself rather than expanding infinitely. In Vermilion Parish, virtually every old Acadian family connects to every other within three or four generations.</p>
+    <p>Cousin marriages were the norm rather than the exception in Cajun south Louisiana. The Acadian exile of 1755 scattered a population of roughly 10,000–14,000 people. Those who reached Louisiana settled in tight communities along the same bayous, attended the same Catholic churches, and grew up together. Marriage records from the era frequently include <em>"dispensation for third degree of consanguinity"</em> — because the Church had formal procedures for cousin marriages, they were so routine.</p>
+    <p style="margin-top:0.75rem;">Genealogists call this <strong>"pedigree collapse"</strong> — the family tree folds back on itself rather than expanding infinitely. In Vermilion Parish, virtually every old Acadian family connects to every other within three or four generations.</p>
   </div>
   <div class="connections-list" id="connections-list"></div>
 </div>
 
-<!-- SOURCES -->
+<!-- ══════════════ SOURCES ══════════════ -->
 <div class="tab-panel" id="tab-sources">
-  <div class="section-header">
-    <span class="ornament">&#x269C; &nbsp; &#x269C; &nbsp; &#x269C;</span>
-    <h2>Sources &amp; Recherche</h2>
+  <div class="tree-header">
+    <h2>Key Sources &amp; Research Notes</h2>
     <p>Primary sources, genealogical databases, and recommended next steps</p>
   </div>
   <div class="sources-grid" id="sources-grid"></div>
-  <div class="intro-card">
-    <h3>&#x269C; &nbsp;Questions Ouvertes &amp; Next Steps&nbsp; &#x269C;</h3>
+  <div class="intro-card" style="margin-top:1.5rem;">
+    <h3>Open Questions &amp; Suggested Next Steps</h3>
     <div id="open-questions"></div>
   </div>
 </div>
 
 </main>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="modal-overlay">
+<!-- ══════════════ MODAL ══════════════ -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
   <div class="modal" id="modal">
     <div class="modal-head">
-      <button class="modal-close" id="modal-close-btn">&#x2715;</button>
+      <button class="modal-close" onclick="closeModalBtn()">✕</button>
       <h2 id="modal-name"></h2>
       <div class="modal-dates" id="modal-dates"></div>
     </div>
@@ -829,39 +615,58 @@ main {
 </div>
 
 <script>
-/* =====================================================
-   DATA
-===================================================== */
+// ── DATA ──────────────────────────────────────────────────────────────────
+
 const boudreaux = [
+  {
+    gen: 0, year: "~1590s",
+    name: "Barbé Minguet",
+    dates: "b. ~1590s, France · d. before ~1640, France (before Acadian emigration)",
+    location: "France (La Rochelle region)",
+    badge: "ancestor",
+    accent: "gold",
+    spouse: "Martin Aucoin (m. France)",
+    fields: [
+      ["Born", "~1590s, France — likely the La Rochelle / Poitou region"],
+      ["Died", "Before ~1640, France — she had passed away before the Aucoin family emigrated to Acadia"],
+      ["Married", "Martin Aucoin, France"],
+      ["Daughter", "Michelle Aucoin (b. ~1618, near La Rochelle) — who emigrated to Port-Royal, Acadia ~1640"],
+      ["Generation", "12th generation ancestor of John Kenneth Landry on the Boudreaux line"],
+      ["Significance", "Maternal grandmother of every Boudreaux/Boudreau descendant in Louisiana"],
+    ],
+    note: "Barbé Minguet is your earliest known Boudreaux-line ancestor. She and her husband Martin Aucoin had a daughter, Michelle, born near La Rochelle around 1618. Barbé died in France before the family emigrated — Michelle and her orphaned siblings arrived at Port-Royal, Acadia around 1640 with their widowed step-mother, Marie Sallé. Michelle then married Michel Boudrot (~1641), founding the entire Boudreaux line in Louisiana. Barbé Minguet does not appear again in Acadian or Louisiana records, but as Michelle's mother she is the 12th-generation maternal grandmother of every Louisiana Boudreaux descendant."
+  },
   {
     gen: 1, year: "~1600",
     name: "Michel Boudrot",
-    dates: "b. ~1600, Cougnes near La Rochelle, France \u00b7 d. ~1688, Port-Royal, Acadia",
-    location: "La Rochelle, France \u2192 Acadia",
-    badge: "patriarch", accent: "rust",
+    dates: "b. ~1600, Cougnes near La Rochelle, France · d. ~1688, Port-Royal, Acadia",
+    location: "La Rochelle, France → Acadia",
+    badge: "patriarch",
+    accent: "rust",
     spouse: "Michelle Aucoin (~1641, Port-Royal)",
     fields: [
-      ["N\u00e9","~1600 at Cougnes, near La Rochelle, France"],
-      ["D\u00e9c\u00e9d\u00e9","~1688, Port-Royal, Acadia, age approximately 88"],
-      ["Mari\u00e9","Michelle Aucoin, Port-Royal, Acadia, ~1641"],
-      ["R\u00f4le","Syndic (mayor) of Port-Royal; Lieutenant G\u00e9n\u00e9ral Civil et Criminel, 1684"],
-      ["Enfants","11 children including Fran\u00e7ois, Charles, Abraham, Michel fils, Olivier, Claude"],
+      ["Born", "~1600 at Cougnes, near La Rochelle, France"],
+      ["Died", "~1688, Port-Royal, Acadia, age approximately 88"],
+      ["Married", "Michelle Aucoin, Port-Royal, Acadia, ~1641"],
+      ["Role", "Syndic (mayor) of Port-Royal; Lieutenant Général Civil et Criminel, 1684"],
+      ["Children", "11 children including François, Charles, Abraham, Michel fils, Olivier, Claude"],
     ],
     note: "Michel came to Port-Royal in the late 1630s and married Michelle Aucoin around 1641. He served as one of Acadia's first syndics (similar to mayor), and in 1684 was appointed the King's representative for justice at Port-Royal. In August 1688 he gave up the post citing his 'great age' of 88. His wife Michelle lived until December 1706, age 85. He is the patriarch and sole founding ancestor of every Boudreaux/Boudreau in Louisiana."
   },
   {
     gen: 2, year: "~1666",
-    name: "Fran\u00e7ois Boudrot",
-    dates: "b. ~1666, Port-Royal \u00b7 d. September 1733, Port-Royal",
+    name: "François Boudrot",
+    dates: "b. ~1666, Port-Royal · d. September 1733, Port-Royal",
     location: "Port-Royal, Acadia",
-    badge: null, accent: "gold",
+    badge: null,
+    accent: "gold",
     spouse: "Madeleine Belliveau (~1692)",
     fields: [
-      ["N\u00e9","~1666, Port-Royal, Acadia"],
-      ["D\u00e9c\u00e9d\u00e9","September 1733, Port-Royal, age 66"],
-      ["Mari\u00e9","Madeleine Belliveau (~1692), daughter of Jean Belliveau and Jeanne Bourg"],
-      ["Enfants","9 children; sons married into Dugas, Melanson, Belliveau, LeBlanc families"],
-      ["Note","Youngest son of Michel Boudrot"],
+      ["Born", "~1666, Port-Royal, Acadia"],
+      ["Died", "September 1733, Port-Royal, age 66"],
+      ["Married", "Madeleine Belliveau (~1692), daughter of Jean Belliveau and Jeanne Bourg"],
+      ["Children", "9 children; sons married into Dugas, Melanson, Belliveau, LeBlanc families"],
+      ["Note", "Youngest son of Michel Boudrot"],
     ],
     note: null
   },
@@ -870,91 +675,97 @@ const boudreaux = [
     name: "Michel Boudrot fils",
     dates: "Carried the line through the years leading to the Great Upheaval",
     location: "Port-Royal, Acadia",
-    badge: null, accent: "gold",
-    spouse: "\u2014",
+    badge: null,
+    accent: "gold",
+    spouse: "—",
     fields: [
-      ["G\u00e9n\u00e9ration","3rd \u2014 son of Fran\u00e7ois, grandson of Michel Boudrot"],
-      ["R\u00f4le","Carried the Boudreaux line through Acadia; descendants would survive Le Grand D\u00e9rangement"],
+      ["Generation", "3rd generation — son of François, grandson of Michel Boudrot"],
+      ["Role", "Carried the Boudreaux line through Acadia; his descendants would survive the Great Upheaval"],
     ],
     note: "Details for this generation are sparse in the record. His descendants faced the Acadian Expulsion of 1755."
   },
   {
     gen: 4, year: "~1740",
     name: "Jean Boudrot",
-    dates: "b. ~1740, Halifax exile \u00b7 d. ~1768, Attakapas, Louisiana",
-    location: "Halifax \u2192 Louisiana (1765)",
-    badge: "exile", accent: "teal",
+    dates: "b. ~1740, Halifax exile · d. ~1768, Attakapas, Louisiana",
+    location: "Halifax → Louisiana (1765)",
+    badge: "exile",
+    accent: "teal",
     spouse: "Marguerite Guilbeau of Port-Royal",
     fields: [
-      ["N\u00e9","~1740"],
-      ["D\u00e9c\u00e9d\u00e9","~1768, Attakapas, Louisiana, age approximately 28"],
-      ["Mari\u00e9","Marguerite Guilbeau of Port-Royal (age 19 at Louisiana arrival)"],
-      ["Arriv\u00e9e","February 1765, with the Beausoleil Broussard party from Halifax"],
-      ["Fils","Jean-Charles dit Donat Boudreaux (only child \u2014 carried on the entire line)"],
+      ["Born", "~1740"],
+      ["Died", "~1768, Attakapas, Louisiana, age approximately 28"],
+      ["Married", "Marguerite Guilbeau of Port-Royal (age 19 at Louisiana arrival)"],
+      ["Arrived Louisiana", "February 1765, with the Beausoleil Broussard party from Halifax"],
+      ["Son", "Jean-Charles dit Donat Boudreaux (only child — carried on the entire line)"],
     ],
-    note: "Jean arrived in Louisiana in February 1765 with the famous Beausoleil Broussard party \u2014 one of the founding groups of Cajun Louisiana. He was 25 years old. Tragically Jean died at Attakapas around 1768, still in his late 20s. His widow Marguerite later married Simon LeBlanc. Jean-Charles dit Donat was his only child and carried on the entire Boudreaux line in south Louisiana."
+    note: "Jean arrived in Louisiana in February 1765 with the famous Beausoleil Broussard party — one of the founding groups of Cajun Louisiana. He was 25 years old. Tragically Jean died at Attakapas around 1768, still in his late 20s. His widow Marguerite later married Simon LeBlanc. Jean-Charles dit Donat was his only child and carried on the entire Boudreaux line in south Louisiana."
   },
   {
     gen: 5, year: "~1763",
     name: "Jean-Charles dit Donat Boudreaux",
-    dates: "b. ~1763, Halifax or Boston \u00b7 d. June 1807, Bayou Vermilion, Louisiana",
-    location: "Halifax / Boston \u2192 Bayou Vermilion, Louisiana",
-    badge: null, accent: "teal",
-    spouse: "Anne-Doroth\u00e9e Comeaux (~1785)",
+    dates: "b. ~1763, Halifax or Boston · d. June 1807, Bayou Vermilion, Louisiana",
+    location: "Halifax / Boston → Bayou Vermilion, Louisiana",
+    badge: null,
+    accent: "teal",
+    spouse: "Anne-Dorothée Comeaux (~1785)",
     fields: [
-      ["N\u00e9","~1763, Halifax (or possibly Boston) during Acadian exile"],
-      ["D\u00e9c\u00e9d\u00e9","June 1807, Bayou Vermilion, Louisiana, age approximately 45"],
-      ["Mari\u00e9","Anne-Doroth\u00e9e Comeaux (~1785), daughter of Charles Comeaux and Anastasie Savoie"],
-      ["\u00c9tabli","Upper Bayou Vermilion, Attakapas District, Louisiana"],
-      ["Enfants","Jean-Baptiste, Leufroi, Augustin, and others; daughters married Blanchet, Broussard, Langlinais, Mouton"],
+      ["Born", "~1763, Halifax (or possibly Boston) during Acadian exile"],
+      ["Died", "June 1807, Bayou Vermilion, Louisiana, age approximately 45"],
+      ["Married", "Anne-Dorothée Comeaux (~1785), daughter of Charles Comeaux and Anastasie Savoie"],
+      ["Settled", "Upper Bayou Vermilion, Attakapas District, Louisiana"],
+      ["Children", "Jean-Baptiste, Leufroi, Augustin, and others; daughters married Blanchet, Broussard, Langlinais, Mouton"],
     ],
     note: "Donat was raised by his mother Marguerite and stepfather Simon LeBlanc after his father died young. He settled on upper Bayou Vermilion and raised several children whose descendants spread through the Cajun parishes."
   },
   {
-    gen: 6, year: "~1789\u20131793",
+    gen: 6, year: "~1789–1793",
     name: "Leufroi Boudreaux",
-    dates: "b. ~July 1789, Opelousas, Louisiana \u00b7 d. July 1866, Lafayette Parish",
-    location: "Opelousas \u2192 Lafayette Parish",
-    badge: null, accent: "gold",
-    spouse: "Marie H\u00e9bert (m. January 1808)",
+    dates: "b. ~July 1789, Opelousas, Louisiana · d. July 1866, Lafayette Parish",
+    location: "Opelousas → Lafayette Parish",
+    badge: null,
+    accent: "gold",
+    spouse: "Marie Hébert (m. January 1808)",
     fields: [
-      ["N\u00e9","~July 1789, Opelousas, Louisiana"],
-      ["D\u00e9c\u00e9d\u00e9","July 1866, Lafayette Parish, reportedly age 84"],
-      ["Mari\u00e9","Marie H\u00e9bert, January 1808, daughter of Jean Charles H\u00e9bert and Madeleine Robichaud"],
-      ["Note","Likely father of Phil\u00e9mon dit Edmond \u2014 the next confirmed link to Duprelie's line"],
+      ["Born", "~July 1789, Opelousas, Louisiana"],
+      ["Died", "July 1866, Lafayette Parish, reportedly age 84"],
+      ["Married", "Marie Hébert, January 1808, daughter of Jean Charles Hébert and Madeleine Robichaud"],
+      ["Note", "Likely father of Philémon dit Edmond — the next confirmed link to Duprelie's line"],
     ],
     note: null
   },
   {
     gen: 7, year: "1798",
-    name: "Phil\u00e9mon dit Edmond Boudreaux",
-    dates: "b. April 1798, Attakapas \u00b7 d. February 1853, Lafayette Parish",
-    location: "Attakapas \u2192 Lafayette Parish",
-    badge: null, accent: "gold",
-    spouse: "\u00c9lisabeth (Isabelle) Simon (m. January 1821, St. Martinville)",
+    name: "Philémon dit Edmond Boudreaux",
+    dates: "b. April 1798, Attakapas · d. February 1853, Lafayette Parish",
+    location: "Attakapas → Lafayette Parish",
+    badge: null,
+    accent: "gold",
+    spouse: "Élisabeth (Isabelle) Simon (m. January 1821, St. Martinville)",
     fields: [
-      ["N\u00e9","April 1798, Attakapas, Louisiana \u2014 born a twin"],
-      ["Aussi connu","Aimond, Aymond, Emon, Emond, Euph\u00e9mon"],
-      ["D\u00e9c\u00e9d\u00e9","February 1853, Lafayette Parish, age approximately 54"],
-      ["Mari\u00e9","\u00c9lisabeth (Isabelle) Simon, January 1821, St. Martinville \u2014 daughter of Jean-Baptiste Simon and Marie Madeleine Aucoin"],
-      ["Enfants","Edmond (fils) and others; daughters married into Bourg, H\u00e9bert, Thibodeaux, Trahan families"],
+      ["Born", "April 1798, Attakapas, Louisiana — born a twin"],
+      ["Also known as", "Aimond, Aymond, Emon, Emond, Euphémon"],
+      ["Died", "February 1853, Lafayette Parish, age approximately 54"],
+      ["Married", "Élisabeth (Isabelle) Simon, January 1821, St. Martinville — daughter of Jean-Baptiste Simon and Marie Madeleine Aucoin"],
+      ["Children", "Edmond (fils) and others; daughters married into Bourg, Hébert, Thibodeaux, Trahan families"],
     ],
-    note: "'Dit Edmond' means he was known by that name, explaining why his son was called Edmond fils. His wife's father, Jean-Baptiste Simon, arrived in Louisiana from France aboard the ship L'Amiti\u00e9 in 1785 \u2014 one of the Seven Ships that brought Acadian exiles back from France."
+    note: "'Dit Edmond' means he was known by that name, explaining why his son was called Edmond fils. His wife's father, Jean-Baptiste Simon, arrived in Louisiana from France aboard the ship L'Amitié in 1785 — one of the Seven Ships that brought Acadian exiles back from France."
   },
   {
     gen: 8, year: "~1837",
     name: "Edmond Boudreaux fils",
-    dates: "b. ~1837, Lafayette Parish \u00b7 d. 1918",
-    location: "Lafayette Parish \u2192 Abbeville, Vermilion Parish",
-    badge: null, accent: "gold",
+    dates: "b. ~1837, Lafayette Parish · d. 1918",
+    location: "Lafayette Parish → Abbeville, Vermilion Parish",
+    badge: null,
+    accent: "gold",
     spouse: "Marie Belzire Thibodeaux (m. February 1858, Abbeville Church)",
     fields: [
-      ["N\u00e9","~1837, Lafayette Parish, Louisiana"],
-      ["D\u00e9c\u00e9d\u00e9","1918"],
-      ["Mari\u00e9","Marie Belzire Thibodeaux, February 1858, Abbeville Church, Vermilion Parish"],
-      ["Recensement 1880","Listed age 44 with wife Belzire age 40, children Edmonia age 7, Daonis age 1"],
-      ["Enfants","Edmond Duplessis (b. Nov 1858), Arthur (b. Apr 1860), Alph\u00e9e (b. Jan 1862), Azena Doralise (b. May 1863), Edmonia (b. ~1873), Daonis (b. ~1879)"],
-      ["Parents de Belzire","\u00c9mile Thibodeaux and M\u00e9lasie Thibodeaux \u2014 a double-cousin marriage"],
+      ["Born", "~1837, Lafayette Parish, Louisiana"],
+      ["Died", "1918"],
+      ["Married", "Marie Belzire Thibodeaux, February 1858, Abbeville Church, Vermilion Parish"],
+      ["1880 Census", "Listed age 44 with wife Belzire age 40, children Edmonia age 7, Daonis age 1"],
+      ["Children", "Edmond Duplessis (b. Nov 1858), Arthur (b. Apr 1860), Alphée (b. Jan 1862), Azena Doralise (b. May 1863), Edmonia (b. ~1873), Daonis (b. ~1879)"],
+      ["Belzire's parents", "Émile Thibodeaux and Mélasie Thibodeaux — a double-cousin marriage"],
     ],
     note: null
   },
@@ -963,74 +774,80 @@ const boudreaux = [
     name: "Arthur J. Boudreaux",
     dates: "b. April 1860, Abbeville, Vermilion Parish",
     location: "Abbeville, Vermilion Parish",
-    badge: null, accent: "gold",
+    badge: null,
+    accent: "gold",
     spouse: "Eumea (Marie Umea) Broussard",
     fields: [
-      ["N\u00e9","April 1860, Abbeville, Vermilion Parish, Louisiana"],
-      ["Parents","Edmond Boudreaux and Marie Belzire Thibodeaux"],
-      ["Mari\u00e9","Eumea (Marie Umea) Broussard \u2014 listed together in 1880 census, Arthur age 20, Eumea age 18"],
-      ["Parents d'Eumea","Valery Broussard (b. 18 Jul 1848, son of Lambert Broussard and Emelie Baudoin) and Onezia Richard (daughter of Joachim Richard and Azelie Melancon)"],
-      ["Acte de mariage","Valery Broussard married Onezia Richard, 19 Oct 1871, Abbeville Church vol. 2, p. 302"],
-      ["Enfants","Edmond Duplessis, Alph\u00e9e, Whitfield, Louise, Dua Joseph (b. 27 Jun 1891, Abbeville), Duprelie Francoise, and others"],
+      ["Born", "April 1860, Abbeville, Vermilion Parish, Louisiana"],
+      ["Parents", "Edmond Boudreaux and Marie Belzire Thibodeaux"],
+      ["Married", "Eumea (Marie Umea) Broussard — listed together in 1880 census, Arthur age 20, Eumea age 18"],
+      ["Eumea's parents", "Valery Broussard (b. 18 Jul 1848, son of Lambert Broussard and Emelie Baudoin) and Onezia Richard (daughter of Joachim Richard and Azelie Melancon)"],
+      ["Marriage record", "Valery Broussard married Onezia Richard, 19 Oct 1871, Abbeville Church vol. 2, p. 302"],
+      ["Children", "Edmond Duplessis, Alphée, Whitfield, Louise, Dua Joseph (b. 27 Jun 1891, Abbeville), Duprelie Francoise, and others"],
     ],
     note: null
   },
   {
-    gen: 10, year: "~1888\u20131895",
+    gen: 10, year: "~1888–1895",
     name: "Duprelie Francoise Boudreaux",
-    dates: "b. ~1888\u20131895, Abbeville \u00b7 d. ~1950\u20131965, Erath",
-    location: "Abbeville \u2192 Erath, Louisiana",
-    badge: null, accent: "rust",
+    dates: "b. ~1888–1895, Abbeville · d. ~1950–1965, Erath",
+    location: "Abbeville → Erath, Louisiana",
+    badge: null,
+    accent: "rust",
     spouse: "Azona (Zona) Landry",
     fields: [
-      ["N\u00e9","~1888\u20131895, Abbeville, Vermilion Parish, Louisiana"],
-      ["D\u00e9c\u00e9d\u00e9","~1950\u20131965, believed buried in Erath, Louisiana"],
-      ["Parents","Arthur J. Boudreaux and Eumea (Marie Umea) Broussard"],
-      ["Mari\u00e9","Azona (Zona) Landry"],
-      ["Origine du pr\u00e9nom","'Duprelie' \u2014 a Cajun construction from the surname Dupr\u00e9; extremely rare"],
-      ["Pr\u00e9nom","Francoise \u2014 passed to son Learly as 'L.F.' Francoise, indicating a significant family name"],
-      ["Enfants (9)","Learly 'L.F.' Francoise, Lona Blackwell, Lilies Landry (your mother), Lilia Bergeron, Lillian Robichaux, Lainee Lachaussee, Louella Broussard, Loula-May LeBouef (b. Jul 18, 1925), Pearly Boudreaux"],
-      ["Confirm\u00e9 par","Tommy Langlinais (WikiTree); Learly's 2019 obituary (Legacy.com / Acadiana Advocate)"],
+      ["Born", "~1888–1895, Abbeville, Vermilion Parish, Louisiana"],
+      ["Died", "~1950–1965, believed buried in Erath, Louisiana"],
+      ["Parents", "Arthur J. Boudreaux and Eumea (Marie Umea) Broussard"],
+      ["Married", "Azona (Zona) Landry"],
+      ["Name origin", "'Duprelie' — a Cajun construction from the surname Dupré, honoring a family connection; extremely rare"],
+      ["Middle name", "Francoise — passed to son Learly as 'L.F.' Francoise, indicating a significant family name"],
+      ["Children (9 known)", "Learly 'L.F.' Francoise, Lona Blackwell, Lilies Landry (your mother), Lilia Bergeron, Lillian Robichaux, Lainee Lachaussee, Louella Broussard, Loula-May LeBouef (b. Jul 18, 1925), Pearly Boudreaux"],
+      ["Confirmed by", "Tommy Langlinais (WikiTree); Learly's 2019 obituary (Legacy.com / Acadiana Advocate)"],
     ],
-    note: "Azona's maiden name Landry suggests a connection to the same Landry family as your father \u2014 cousin marriage is likely but not yet confirmed from public records."
+    note: "Azona's maiden name Landry suggests a connection to the same Landry family as your father — cousin marriage is likely but not yet confirmed from public records."
   },
   {
-    gen: "11 \u2014 Votre M\u00e8re", year: null,
+    gen: "11 — Your Mother",
+    year: null,
     name: "Lilies Boudreaux",
     dates: "Daughter of Duprelie Boudreaux & Azona Landry",
     location: "Vermilion Parish, Louisiana",
-    badge: "you", accent: "rust",
+    badge: "you",
+    accent: "rust",
     spouse: "John Henry Landry",
     fields: [
-      ["Parents","Duprelie Francoise Boudreaux and Azona (Zona) Landry"],
-      ["Grands-parents (paternel)","Arthur J. Boudreaux and Eumea Broussard"],
-      ["Arri\u00e8re-grands-parents","Edmond Boudreaux and Marie Belzire Thibodeaux"],
-      ["Origine","France (~1600) \u2192 Acadia \u2192 Halifax exile \u2192 Louisiana (1765)"],
-      ["Fr\u00e8res et s\u0153urs","Learly 'L.F.' Francoise (1920\u20132019), Lona Blackwell, Lilia Bergeron, Lillian Robichaux, Lainee Lachaussee, Louella Broussard, Loula-May LeBouef, Pearly Boudreaux"],
+      ["Parents", "Duprelie Francoise Boudreaux and Azona (Zona) Landry"],
+      ["Grandparents (paternal)", "Arthur J. Boudreaux and Eumea Broussard"],
+      ["Great-grandparents (paternal)", "Edmond Boudreaux and Marie Belzire Thibodeaux"],
+      ["Boudreaux line origin", "France (~1600) → Acadia → Halifax exile → Louisiana (1765)"],
+      ["Siblings", "Learly 'L.F.' Francoise (1920–2019), Lona Blackwell, Lilia Bergeron, Lillian Robichaux, Lainee Lachaussee, Louella Broussard, Loula-May LeBouef, Pearly Boudreaux"],
     ],
     note: "Your mother Lilies Boudreaux married John Henry Landry, uniting two of the oldest Acadian lines in Vermilion Parish."
   },
 ];
 
 const learly = {
-  gen: "11 (Branche)", year: "1920\u20132019",
+  gen: "11 (Branch)",
+  year: "1920–2019",
   name: "Learly 'L.F.' Francoise Boudreaux",
-  dates: "b. December 7, 1920, Abbeville \u00b7 d. November 28, 2019, Lafayette",
-  location: "Abbeville \u2192 Lafayette, Louisiana",
-  badge: null, accent: "teal",
+  dates: "b. December 7, 1920, Abbeville · d. November 28, 2019, Lafayette",
+  location: "Abbeville → Lafayette, Louisiana",
+  badge: null,
+  accent: "teal",
   spouse: "Jeanne Boudreaux",
   fields: [
-    ["N\u00e9","December 7, 1920, Abbeville, Louisiana"],
-    ["D\u00e9c\u00e9d\u00e9","November 28, 2019, Maison de Lafayette, Lafayette, Louisiana \u2014 age 98"],
-    ["Parents","Duprelie and Zona Landry Boudreaux"],
-    ["\u00c9ducation","Abbeville Senior High School; S.L.I. University (now University of Louisiana at Lafayette)"],
-    ["Militaire","U.S. Army \u2014 honor detail provided at graveside"],
-    ["Mari\u00e9","Jeanne Boudreaux"],
-    ["Fils","Dale James Boudreaux"],
-    ["Petit-fils","Garett Lane Boudreaux (m. Dayna)"],
-    ["Arri\u00e8re-petits-enfants","Neil James Boudreaux (m. Lindsay); Meaghan Marie Boudreaux Landry (m. Logan)"],
-    ["Arri\u00e8re-arri\u00e8re-petit-fils","Beckett Lane Boudreaux"],
-    ["Source","Obituary: Acadiana Advocate / Legacy.com, ID 9623168"],
+    ["Born", "December 7, 1920, Abbeville, Louisiana"],
+    ["Died", "November 28, 2019, Maison de Lafayette, Lafayette, Louisiana — age 98"],
+    ["Parents", "Duprelie and Zona Landry Boudreaux"],
+    ["Education", "Abbeville Senior High School; S.L.I. University (now University of Louisiana at Lafayette)"],
+    ["Military", "U.S. Army — honor detail provided at graveside"],
+    ["Married", "Jeanne Boudreaux"],
+    ["Son", "Dale James Boudreaux"],
+    ["Grandson", "Garett Lane Boudreaux (m. Dayna)"],
+    ["Great-grandchildren", "Neil James Boudreaux (m. Lindsay); Meaghan Marie Boudreaux Landry (m. Logan)"],
+    ["Great-great-grandson", "Beckett Lane Boudreaux"],
+    ["Source", "Obituary: Acadiana Advocate / Legacy.com, ID 9623168"],
   ],
   note: "Learly was the sibling of Lilies Boudreaux (your mother). His 2019 obituary was a key source confirming Duprelie and Zona Landry Boudreaux as parents."
 };
@@ -1038,29 +855,31 @@ const learly = {
 const landry = [
   {
     gen: 1, year: "~1618",
-    name: "Ren\u00e9 Landry l'a\u00een\u00e9",
-    dates: "b. ~1618, La Chauss\u00e9e near Loudun, France \u00b7 d. ~1686, Port-Royal, Acadia",
-    location: "La Chauss\u00e9e, France \u2192 Port-Royal, Acadia",
-    badge: "patriarch", accent: "rust",
+    name: "René Landry l'aîné",
+    dates: "b. ~1618, La Chaussée near Loudun, France · d. ~1686, Port-Royal, Acadia",
+    location: "La Chaussée, France → Port-Royal, Acadia",
+    badge: "patriarch",
+    accent: "rust",
     spouse: "Perrine Bourg (~1645, Port-Royal)",
     fields: [
-      ["N\u00e9","~1618, La Chauss\u00e9e near Loudun, Vienne d\u00e9partement, France"],
-      ["D\u00e9c\u00e9d\u00e9","~1686, Port-Royal, Acadia"],
-      ["Mari\u00e9","Perrine Bourg, ~1645, Port-Royal, Acadia"],
-      ["Recensement 1671","Listed at Port-Royal: age 52, wife Perrine age 45; children Henriette 30, Jeanne 28, Marie 25, Marie 23, Magdeleine 15, Pierre 13, Claude 8"],
+      ["Born", "~1618, La Chaussée near Loudun, Vienne département, France"],
+      ["Died", "~1686, Port-Royal, Acadia"],
+      ["Married", "Perrine Bourg, ~1645, Port-Royal, Acadia"],
+      ["1671 Census", "Listed at Port-Royal: age 52, wife Perrine age 45; children Henriette 30, Jeanne 28, Marie 25, Marie 23, Magdeleine 15, Pierre 13, Claude 8"],
     ],
-    note: "Ren\u00e9 l'a\u00een\u00e9 appears in the church register of La Chauss\u00e9e in 1638 as a godparent to a Girouard child \u2014 confirming his presence there before emigrating. The name Landry is well documented in the region near Loudun in the Vienne d\u00e9partement of France, and a majority of early Acadian colonists came from the Loudun area of Poitou. He is the patriarch of the Louisiana Landry lines."
+    note: "René l'aîné appears in the church register of La Chaussée in 1638 as a godparent to a Girouard child — confirming his presence there before emigrating. The name Landry is well documented in the region near Loudun in the Vienne département of France, and a majority of early Acadian colonists came from the Loudun area of Poitou. He is the patriarch of the Louisiana Landry lines."
   },
   {
     gen: 2, year: "mid-1600s",
-    name: "Ren\u00e9 Landry the Younger",
-    dates: "Son of Ren\u00e9 l'a\u00een\u00e9; continued the line at Port Royal",
+    name: "René Landry the Younger",
+    dates: "Son of René l'aîné; continued the line at Port Royal",
     location: "Port Royal, Acadia",
-    badge: null, accent: "gold",
-    spouse: "\u2014",
+    badge: null,
+    accent: "gold",
+    spouse: "—",
     fields: [
-      ["Lieu","Port Royal, Acadia"],
-      ["Note","Son of Ren\u00e9 Landry l'a\u00een\u00e9; continued the line at Port Royal"],
+      ["Location", "Port Royal, Acadia"],
+      ["Note", "Son of René Landry l'aîné; continued the line at Port Royal"],
     ],
     note: null
   },
@@ -1069,74 +888,79 @@ const landry = [
     name: "Abraham Landry the Elder",
     dates: "b. ~1678, Port Royal, Acadia",
     location: "Port Royal, Acadia",
-    badge: null, accent: "gold",
+    badge: null,
+    accent: "gold",
     spouse: "Marie Josephe Guilbeau",
     fields: [
-      ["N\u00e9","~1678, Port Royal, Acadia"],
-      ["Mari\u00e9","Marie Josephe Guilbeau"],
-      ["Note","Father of Abraham Landry the younger, who is honored on the Wall of Names"],
+      ["Born", "~1678, Port Royal, Acadia"],
+      ["Married", "Marie Josephe Guilbeau"],
+      ["Note", "Father of Abraham Landry the younger, who is honored on the Wall of Names"],
     ],
     note: null
   },
   {
     gen: 4, year: "~1712",
-    name: "Abraham Landry \u2605 Wall of Names",
-    dates: "b. ~1712, Pisiquit, Acadia (present-day Windsor, NS) \u00b7 arrived Louisiana ~1769",
-    location: "Pisiquit, Acadia \u2192 Maryland (exile) \u2192 Louisiana (~1769)",
-    badge: "wall", accent: "teal",
+    name: "Abraham Landry ★ Wall of Names",
+    dates: "b. ~1712, Pisiquit, Acadia (present-day Windsor, NS) · arrived Louisiana ~1769",
+    location: "Pisiquit, Acadia → Maryland (exile) → Louisiana (~1769)",
+    badge: "wall",
+    accent: "teal",
     spouse: "Elizabeth 'Isabelle' LeBlanc",
     fields: [
-      ["N\u00e9","~1712, Pisiquit, Acadia (present-day Windsor, Nova Scotia)"],
-      ["Mari\u00e9","Elizabeth 'Isabelle' LeBlanc"],
-      ["Exil","Deported to Maryland in 1755 on the ship 'Ranger' during Le Grand D\u00e9rangement"],
-      ["Arriv\u00e9e","~1769, after years of exile in Maryland"],
-      ["Wall of Names","Honored at the Acadian Memorial, St. Martinville, Louisiana"],
+      ["Born", "~1712, Pisiquit, Acadia (present-day Windsor, Nova Scotia)"],
+      ["Married", "Elizabeth 'Isabelle' LeBlanc"],
+      ["Exile", "Deported to Maryland in 1755 on the ship 'Ranger' during Le Grand Dérangement"],
+      ["Arrived Louisiana", "~1769, after years of exile in Maryland"],
+      ["Wall of Names", "Honored at the Acadian Memorial, St. Martinville, Louisiana"],
     ],
-    note: "Abraham survived the Acadian expulsion and made the difficult journey from Maryland to Louisiana. His name is engraved on the bronze Wall of Names at the Acadian Memorial in St. Martinville \u2014 one of approximately 3,000 Acadian refugees listed."
+    note: "Abraham survived the Acadian expulsion and made the difficult journey from Maryland to Louisiana. His name is engraved on the bronze Wall of Names at the Acadian Memorial in St. Martinville — one of approximately 3,000 Acadian refugees listed."
   },
   {
-    gen: "4 (Branche)", year: "~1721",
-    name: "Pierre 'Pierrot \u00e0 Jacques' Landry \u2605 Wall of Names",
+    gen: "4 (Branch)", year: "~1721",
+    name: "Pierre 'Pierrot à Jacques' Landry ★ Wall of Names",
     dates: "b. ~1721, Pisiquit, Acadia",
-    location: "Pisiquit, Acadia \u2192 Louisiana",
-    badge: "wall", accent: "teal",
+    location: "Pisiquit, Acadia → Louisiana",
+    badge: "wall",
+    accent: "teal",
     spouse: "Genevieve Broussard",
     fields: [
-      ["N\u00e9","~1721, Pisiquit, Acadia"],
-      ["Mari\u00e9","Genevieve Broussard"],
-      ["Wall of Names","Honored at the Acadian Memorial, St. Martinville, Louisiana"],
-      ["Note","The Wall of Names lists approximately 3,000 Acadian refugees. Visitors can make rubbings of any name."],
-      ["Adresse","121 S. New Market St., St. Martinville, LA 70582 \u2014 Phone: (337) 394-2258"],
+      ["Born", "~1721, Pisiquit, Acadia"],
+      ["Married", "Genevieve Broussard"],
+      ["Wall of Names", "Honored at the Acadian Memorial, St. Martinville, Louisiana"],
+      ["Note", "The Wall of Names lists approximately 3,000 Acadian refugees. Visitors can make rubbings of any name."],
+      ["Memorial address", "121 S. New Market St., St. Martinville, LA 70582 — Phone: (337) 394-2258"],
     ],
-    note: "Pierre 'Pierrot \u00e0 Jacques' Landry is the second of your direct ancestors honored on the Wall of Names at the Acadian Memorial."
+    note: "Pierre 'Pierrot à Jacques' Landry is the second of your direct ancestors honored on the Wall of Names at the Acadian Memorial."
   },
   {
     gen: 5, year: "late 1700s",
     name: "Basile Landry",
-    dates: "Son of Pierre 'Pierrot \u00e0 Jacques'; settled St. Martinville, Louisiana",
-    location: "Acadia \u2192 St. Martinville, Louisiana",
-    badge: null, accent: "gold",
+    dates: "Son of Pierre 'Pierrot à Jacques'; settled St. Martinville, Louisiana",
+    location: "Acadia → St. Martinville, Louisiana",
+    badge: null,
+    accent: "gold",
     spouse: "Marie Richard",
     fields: [
-      ["Parents","Pierre 'Pierrot \u00e0 Jacques' Landry and Genevieve Broussard"],
-      ["Mari\u00e9","Marie Richard"],
-      ["\u00c9tabli","St. Martinville, Louisiana \u2014 after family's journey from Acadia"],
+      ["Parents", "Pierre 'Pierrot à Jacques' Landry and Genevieve Broussard"],
+      ["Married", "Marie Richard"],
+      ["Settled", "St. Martinville, Louisiana — after family's journey from Acadia"],
     ],
     note: null
   },
   {
     gen: 6, year: "1782",
-    name: "Jean Pierre Landry p\u00e8re",
-    dates: "b. February 1, 1782, St. Martin Parish \u00b7 d. before May 7, 1823",
+    name: "Jean Pierre Landry père",
+    dates: "b. February 1, 1782, St. Martin Parish · d. before May 7, 1823",
     location: "St. Martin Parish, Louisiana",
-    badge: null, accent: "gold",
-    spouse: "Rose Adelaide Dugas (b. Dec 22, 1786 \u00b7 d. Feb 11, 1839)",
+    badge: null,
+    accent: "gold",
+    spouse: "Rose Adelaide Dugas (b. Dec 22, 1786 · d. Feb 11, 1839)",
     fields: [
-      ["N\u00e9","February 1, 1782, St. Martin Parish, Louisiana"],
-      ["D\u00e9c\u00e9d\u00e9","Before May 7, 1823 (succession filed Lafayette Courthouse, Succ. #82)"],
-      ["Mari\u00e9","Rose Adelaide Dugas (b. Dec 22, 1786 \u2014 d. Feb 11, 1839)"],
-      ["Note","Died young; his widow Rose Adelaide later remarried Sylvain Dubois on Oct 31, 1826"],
-      ["Source","Southwest Louisiana Records (H\u00e9bert); Landry Genealogy database"],
+      ["Born", "February 1, 1782, St. Martin Parish, Louisiana"],
+      ["Died", "Before May 7, 1823 (succession filed Lafayette Courthouse, Succ. #82)"],
+      ["Married", "Rose Adelaide Dugas (b. Dec 22, 1786 — d. Feb 11, 1839)"],
+      ["Note", "Died young; his widow Rose Adelaide later remarried Sylvain Dubois on Oct 31, 1826"],
+      ["Source", "Southwest Louisiana Records (Hébert); Landry Genealogy database"],
     ],
     note: null
   },
@@ -1144,15 +968,16 @@ const landry = [
     gen: 7, year: "1803",
     name: "Jean Pierre Landry II",
     dates: "b. April 8, 1803, St. Martin Parish",
-    location: "St. Martin Parish \u2192 Louisiana",
-    badge: null, accent: "gold",
-    spouse: "Adelaide Broussard (b. Dec 16, 1805 \u00b7 d. April 2, 1852)",
+    location: "St. Martin Parish → Louisiana",
+    badge: null,
+    accent: "gold",
+    spouse: "Adelaide Broussard (b. Dec 16, 1805 · d. April 2, 1852)",
     fields: [
-      ["N\u00e9","April 8, 1803, St. Martin Parish, Louisiana"],
-      ["Mari\u00e9","Adelaide Broussard (b. Dec 16, 1805 \u2014 d. April 2, 1852, age 46)"],
-      ["Parents d'Ad\u00e9la\u00efde","Theophile Broussard (1773\u20131824) and Victoire Landry (~1776\u20131810)"],
-      ["Succession","Adelaide's succession dated Feb 6, 1854 at Franklin Courthouse names Jean Pierre as husband"],
-      ["Fils connu","Pierre Theolin Landry (b. ~1840) \u2014 Confederate soldier, Co. G 7th La. Cavalry; settled Delcambre; died April 16, 1923, age 82"],
+      ["Born", "April 8, 1803, St. Martin Parish, Louisiana"],
+      ["Married", "Adelaide Broussard (b. Dec 16, 1805 — d. April 2, 1852, age 46)"],
+      ["Adelaide's parents", "Theophile Broussard (1773–1824) and Victoire Landry (~1776–1810)"],
+      ["Note on succession", "Adelaide's succession dated Feb 6, 1854 at Franklin Courthouse names Jean Pierre as husband"],
+      ["Known son", "Pierre Theolin Landry (b. ~1840) — Confederate soldier, Co. G 7th La. Cavalry; settled Delcambre; died April 16, 1923, age 82"],
     ],
     note: null
   },
@@ -1161,14 +986,15 @@ const landry = [
     name: "Maximilien Similien Landry",
     dates: "Son or grandson of Jean Pierre II",
     location: "Vermilion Parish, Louisiana",
-    badge: null, accent: "gold",
+    badge: null,
+    accent: "gold",
     spouse: "Marie Marcelite Trahan",
     fields: [
-      ["Nom complet","Maximilien Similien Landry"],
-      ["Mari\u00e9","Marie Marcelite Trahan"],
-      ["Enfants (confirm\u00e9s)","Scholastique (b. Nov 11, 1841), Isaac (b. Nov 27, 1844), Joseph Theolin (b. Aug 1849), Rosclair, Theogene 'Theodore', Olivia (married Broussard)"],
-      ["Confirm\u00e9 par","Delcambre genealogy database; MyHeritage family trees; 1900 Vermilion census"],
-      ["Relation","Likely son or grandson of Jean Pierre II \u2014 one generation may exist in the gap"],
+      ["Full name", "Maximilien Similien Landry"],
+      ["Married", "Marie Marcelite Trahan"],
+      ["Children (confirmed)", "Scholastique (b. Nov 11, 1841), Isaac (b. Nov 27, 1844), Joseph Theolin (b. Aug 1849), Rosclair, Theogene 'Theodore', Olivia (married Broussard)"],
+      ["Confirmed by", "Delcambre genealogy database; MyHeritage family trees; 1900 Vermilion census"],
+      ["Relationship to Jean Pierre II", "Likely son or grandson — the gap of one generation may exist in the family tree"],
     ],
     note: null
   },
@@ -1177,219 +1003,282 @@ const landry = [
     name: "Joseph Theolin Landry",
     dates: "b. August 1849, Vermilion Parish",
     location: "Vermilion Parish (Ward Erath)",
-    badge: null, accent: "gold",
+    badge: null,
+    accent: "gold",
     spouse: "Felicia Delcambre (b. Nov 3, 1849; m. February 10, 1868, New Iberia)",
     fields: [
-      ["N\u00e9","August 1849, Vermilion Parish, Louisiana"],
-      ["Parents","Maximilien Landry and Marcelite Trahan"],
-      ["Mari\u00e9","Felicia Delcambre (b. Nov 3, 1849), February 10, 1868, New Iberia"],
-      ["Recensement 1900","Ward Erath: Joseph Theolin LANDRY aug49, Felicia DELCAMBRE w11,7 nov49, children Armine, Adlar, Odalie, Elmire"],
-      ["Enfants","Armine (b. Jan 1874), Adlar (b. Jun 1880), Odalie (b. Mar 1884), Elmire (b. Feb 1886)"],
+      ["Born", "August 1849, Vermilion Parish, Louisiana"],
+      ["Parents", "Maximilien Landry and Marcelite Trahan"],
+      ["Married", "Felicia Delcambre (b. Nov 3, 1849), February 10, 1868, New Iberia"],
+      ["1900 Census", "Listed Ward Erath: Joseph Theolin LANDRY aug49, Felicia DELCAMBRE w11,7 nov49, children Armine d jan74, Adlar s jun80, Odalie d 3 mar84, Elmire d 19 feb86"],
+      ["Children", "Armine (b. Jan 1874), Adlar (b. Jun 1880), Odalie (b. Mar 1884), Elmire (b. Feb 1886)"],
     ],
     note: null
   },
   {
     gen: 10, year: "1880",
     name: "Adlar Landry",
-    dates: "b. June 1880, Vermilion Parish \u00b7 d. Erath, Louisiana",
-    location: "Vermilion Parish \u2192 Erath, Louisiana",
-    badge: null, accent: "rust",
+    dates: "b. June 1880, Vermilion Parish · d. Erath, Louisiana",
+    location: "Vermilion Parish → Erath, Louisiana",
+    badge: null,
+    accent: "rust",
     spouse: "Cecile Lachaussee (b. ~1873)",
     fields: [
-      ["N\u00e9","June 1880, Vermilion Parish, Louisiana"],
-      ["D\u00e9c\u00e9d\u00e9","Erath, Louisiana"],
-      ["Parents","Joseph Theolin Landry and Felicia Delcambre"],
-      ["Mari\u00e9","Cecile Lachaussee (b. ~1873)"],
-      ["Parents de C\u00e9cile","Simonet Lachaussee (b. January 1838) and Marie Belzire Broussard"],
-      ["Fr\u00e8res et s\u0153urs de C\u00e9cile","Clemence Lachaussee (m. Jean Baptiste Boudreaux), Louisa, St. Julien (m. Ida Boudreaux), Edouard, Ludovic"],
-      ["Enfants","Abel (1901\u20131952), John Henry (Freeport TX \u2014 your father), Lodo (Erath), Cesar (Erath), Lucas (Kaplan), Lily (New Orleans), Edward (Abbeville)"],
+      ["Born", "June 1880, Vermilion Parish, Louisiana"],
+      ["Died", "Erath, Louisiana"],
+      ["Parents", "Joseph Theolin Landry and Felicia Delcambre"],
+      ["Married", "Cecile Lachaussee (b. ~1873)"],
+      ["Cecile's parents", "Simonet Lachaussee (b. January 1838) and Marie Belzire Broussard"],
+      ["Cecile's siblings", "Clemence Lachaussee (m. Jean Baptiste Boudreaux), Louisa, St. Julien (m. Ida Boudreaux), Edouard, Ludovic"],
+      ["Children", "Abel (1901–1952), John Henry (Freeport TX — your father), Lodo (Erath), Cesar (Erath), Lucas (Kaplan), Lily (New Orleans), Edward (Abbeville)"],
     ],
-    note: "Simonet Lachaussee was listed in the 1900 Vermilion census as Adlar's neighbor \u2014 this is likely how Adlar and Cecile met. Cecile's mother was a Broussard, directly connecting to the Boudreaux line through that surname."
+    note: "Simonet Lachaussee was listed in the 1900 Vermilion census as Adlar's neighbor — this is likely how Adlar and Cecile met. Cecile's mother was a Broussard, directly connecting to the Boudreaux line through that surname."
   },
   {
-    gen: "11 \u2014 Votre P\u00e8re", year: null,
+    gen: "11 — Your Father",
+    year: null,
     name: "John Henry Landry",
-    dates: "Son of Adlar Landry & Cecile Lachaussee \u00b7 resided Freeport, Texas",
-    location: "Erath, Louisiana \u2192 Freeport, Texas",
-    badge: "you", accent: "rust",
+    dates: "Son of Adlar Landry & Cecile Lachaussee · resided Freeport, Texas",
+    location: "Erath, Louisiana → Freeport, Texas",
+    badge: "you",
+    accent: "rust",
     spouse: "Lilies Boudreaux",
     fields: [
-      ["Parents","Adlar Landry and Cecile Lachaussee"],
-      ["Grands-parents (paternel)","Joseph Theolin Landry and Felicia Delcambre"],
-      ["Arri\u00e8re-grands-parents","Maximilien Landry and Marcelite Trahan"],
-      ["Lieu","Freeport, Texas (listed in family records)"],
-      ["Fr\u00e8res et s\u0153urs","Abel (1901\u20131952), Lodo (Erath), Cesar (Erath), Lucas (Kaplan), Lily (New Orleans), Edward (Abbeville)"],
-      ["Origine","France (~1618) \u2192 Acadia \u2192 Maryland exile \u2192 Louisiana (~1769)"],
+      ["Parents", "Adlar Landry and Cecile Lachaussee"],
+      ["Grandparents (paternal)", "Joseph Theolin Landry and Felicia Delcambre"],
+      ["Great-grandparents (paternal)", "Maximilien Landry and Marcelite Trahan"],
+      ["Location", "Freeport, Texas (listed in family records)"],
+      ["Siblings", "Abel (1901–1952), Lodo (Erath), Cesar (Erath), Lucas (Kaplan), Lily (New Orleans), Edward (Abbeville)"],
+      ["Landry line origin", "France (~1618) → Acadia → Maryland exile → Louisiana (~1769)"],
     ],
-    note: "John Henry Landry married Lilies Boudreaux, uniting the Landry and Boudreaux lines \u2014 two of the oldest Acadian families in Vermilion Parish, Louisiana."
+    note: "John Henry Landry married Lilies Boudreaux, uniting the Landry and Boudreaux lines — two of the oldest Acadian families in Vermilion Parish, Louisiana."
   },
 ];
 
 const connections = [
-  { title: "Lachaussee \u00d7 Boudreaux", text: "Cecile Lachaussee's sister Clemence married Jean Baptiste Boudreaux. Cecile's brother St. Julien Lachaussee married Ida Boudreaux. Duprelie's daughter Lainee married into the Lachaussee family. The Lachaussee and Boudreaux families were already intermarried before your parents were born." },
-  { title: "Lachaussee \u00d7 Broussard", text: "Cecile Lachaussee's mother was Marie Belzire Broussard. Eumea Broussard (Duprelie's mother) was also a Vermilion Parish Broussard. The Broussard name runs through both your mother's and father's lines." },
-  { title: "Landry \u00d7 Boudreaux (likely)", text: "Azona Landry (your grandmother, Duprelie's wife) carried the Landry surname \u2014 the same surname as your father's entire line. In a parish as small as Vermilion, two people named Landry marrying in the same generation almost certainly shared common Landry ancestors. This has not yet been confirmed from public records." },
-  { title: "Broussard \u00d7 Landry (historical)", text: "Adelaide Broussard (wife of Jean Pierre Landry II) descended from Theophile Broussard and Victoire Landry \u2014 a Landry woman married into Broussard, and her daughter then married back into Landry. These families married each other repeatedly for generations." },
-  { title: "Thibodeaux Connections", text: "Belzire Thibodeaux (Edmond's wife, your great-great-grandmother on the Boudreaux side) had parents who were double cousins: \u00c9mile Thibodeaux and M\u00e9lasie Thibodeaux. The Thibodeaux family appears in church records throughout both lines." },
+  {
+    title: "Lachaussee × Boudreaux",
+    text: "Cecile Lachaussee's sister Clemence married Jean Baptiste Boudreaux. Cecile's brother St. Julien Lachaussee married Ida Boudreaux. Duprelie's daughter Lainee married into the Lachaussee family. The Lachaussee and Boudreaux families were already intermarried before your parents were born."
+  },
+  {
+    title: "Lachaussee × Broussard",
+    text: "Cecile Lachaussee's mother was Marie Belzire Broussard. Eumea Broussard (Duprelie's mother) was also a Vermilion Parish Broussard. The Broussard name runs through both your mother's and father's lines."
+  },
+  {
+    title: "Landry × Boudreaux (likely)",
+    text: "Azona Landry (your grandmother, Duprelie's wife) carried the Landry surname — the same surname as your father's entire line. In a parish as small as Vermilion, two people named Landry marrying in the same generation almost certainly shared common Landry ancestors. This has not yet been confirmed from public records."
+  },
+  {
+    title: "Broussard × Landry (historical)",
+    text: "Adelaide Broussard (wife of Jean Pierre Landry II) descended from Theophile Broussard and Victoire Landry — a Landry woman married into Broussard, and her daughter then married back into Landry. These families married each other repeatedly for generations."
+  },
+  {
+    title: "Thibodeaux Connections",
+    text: "Belzire Thibodeaux (Edmond's wife, your great-great-grandmother on the Boudreaux side) had parents who were double cousins: Émile Thibodeaux and Mélasie Thibodeaux. The Thibodeaux family appears in church records throughout both lines."
+  },
 ];
 
 const sources = [
-  { title: "Recensements / Census Records", text: "1870 Vermilion Parish Census (USGenWeb Archives). 1880 Vermilion Parish Census \u2014 confirms Arthur Boudreaux (age 20) with Eumea Broussard (age 18); Edmond Boudreaux (age 44) with Belzire Thibodeaux (age 40). 1900 Vermilion Parish Census \u2014 confirms Joseph Theolin Landry household with children including Adlar (b. Jun 1880); also confirms Simonet Lachaussee household." },
-  { title: "Registres d'\u00c9glise / Church Records", text: "Abbeville Church (St. Mary Magdalen) \u2014 baptismal, marriage, and burial registers. St. Martinville Church records \u2014 marriages of Phil\u00e9mon Boudreaux (Jan 1821), Augustin Boudreaux (Apr 1812). Records indexed in Southwest Louisiana Records (Rev. Donald J. H\u00e9bert)." },
-  { title: "Bases de donn\u00e9es / Genealogical Databases", text: "Acadians in Gray database (acadiansingray.com) \u2014 primary source for Boudreaux line narrative. Delcambre Genealogy (friedman.cs.illinois.edu) \u2014 confirmed Felicia Delcambre's parents and Joseph Theolin Landry's parents. Landry Genealogy (friedman.cs.illinois.edu) \u2014 confirmed Jean Pierre Landry p\u00e8re dates." },
-  { title: "WikiTree Research", text: "Tommy Langlinais (WikiTree researcher) directly confirmed Duprelie Boudreaux's parents as Arthur J. Boudreaux and Umea Broussard. Key profiles: Broussard-7, Broussard-8, Boudreaux-1191, Landry-2389, Broussard-1478." },
-  { title: "N\u00e9crologies / Obituaries", text: "Learly 'L.F.' Francoise Boudreaux obituary (Nov 28, 2019) \u2014 Acadiana Advocate / Legacy.com ID 9623168 \u2014 primary source confirming Duprelie and Zona Landry as parents; names all siblings. Find a Grave: Theolin Landry (memorial 158774754) \u2014 obituary from Abbeville Meridional April 21, 1923." },
-  { title: "Southwest Louisiana Records", text: "Rev. Donald J. H\u00e9bert, Southwest Louisiana Records 1750\u20131900 (H\u00e9bert Publications, 1975\u20132001; reprints Claitor's Publishing) \u2014 the gold standard source for south Louisiana genealogy; referenced throughout." },
-  { title: "Mur des Noms / Wall of Names", text: "The Acadian Memorial, St. Martinville, Louisiana \u2014 lists approximately 3,000 Acadian refugees. Names engraved on 12 bronze plaques framed in granite. Abraham Landry and Pierre 'Pierrot \u00e0 Jacques' Landry are confirmed on the Wall. Address: 121 S. New Market St., St. Martinville, LA 70582." },
-  { title: "MyHeritage Family Trees", text: "Hardcastle Web Site (Martha Guthrie) and Boudreaux Web Site (Greg Boudreaux) on MyHeritage \u2014 confirmed Maximilien Landry + Marcelite Trahan as parents of Joseph Theolin Landry; confirmed Simonet Lachaussee + Marie Belzire Broussard as parents of Cecile Lachaussee." },
+  {
+    title: "Census Records",
+    text: "1870 Vermilion Parish Census (USGenWeb Archives). 1880 Vermilion Parish Census — confirms Arthur Boudreaux (age 20) with Eumea Broussard (age 18); Edmond Boudreaux (age 44) with Belzire Thibodeaux (age 40). 1900 Vermilion Parish Census — confirms Joseph Theolin Landry household with children including Adlar (b. Jun 1880); also confirms Simonet Lachaussee household."
+  },
+  {
+    title: "Church Records",
+    text: "Abbeville Church (St. Mary Magdalen) — baptismal, marriage, and burial registers. St. Martinville Church records — marriages of Philémon Boudreaux (Jan 1821), Augustin Boudreaux (Apr 1812). Records indexed in Southwest Louisiana Records (Rev. Donald J. Hébert)."
+  },
+  {
+    title: "Genealogical Databases",
+    text: "Acadians in Gray database (acadiansingray.com) — primary source for Boudreaux line narrative. Delcambre Genealogy (friedman.cs.illinois.edu) — confirmed Felicia Delcambre's parents and Joseph Theolin Landry's parents. Landry Genealogy (friedman.cs.illinois.edu) — confirmed Jean Pierre Landry père dates."
+  },
+  {
+    title: "WikiTree Research",
+    text: "Tommy Langlinais (WikiTree researcher) directly confirmed Duprelie Boudreaux's parents as Arthur J. Boudreaux and Umea Broussard. Key profiles: Broussard-7, Broussard-8, Boudreaux-1191, Landry-2389, Broussard-1478."
+  },
+  {
+    title: "Obituaries",
+    text: "Learly 'L.F.' Francoise Boudreaux obituary (Nov 28, 2019) — Acadiana Advocate / Legacy.com ID 9623168 — primary source confirming Duprelie and Zona Landry as parents; names all siblings. Find a Grave: Theolin Landry (memorial 158774754) — obituary from Abbeville Meridional April 21, 1923."
+  },
+  {
+    title: "Southwest Louisiana Records",
+    text: "Rev. Donald J. Hébert, Southwest Louisiana Records 1750–1900 (Hébert Publications, 1975–2001; reprints Claitor's Publishing) — the gold standard source for south Louisiana genealogy; referenced throughout."
+  },
+  {
+    title: "Wall of Names",
+    text: "The Acadian Memorial, St. Martinville, Louisiana — lists approximately 3,000 Acadian refugees. Names engraved on 12 bronze plaques framed in granite. Abraham Landry and Pierre 'Pierrot à Jacques' Landry are confirmed on the Wall. Address: 121 S. New Market St., St. Martinville, LA 70582."
+  },
+  {
+    title: "MyHeritage Family Trees",
+    text: "Hardcastle Web Site (Martha Guthrie) and Boudreaux Web Site (Greg Boudreaux) on MyHeritage — confirmed Maximilien Landry + Marcelite Trahan as parents of Joseph Theolin Landry; confirmed Simonet Lachaussee + Marie Belzire Broussard as parents of Cecile Lachaussee."
+  },
 ];
 
 const openQuestions = [
-  { title: "Azona Landry's parentage \u2014 HIGHEST PRIORITY", text: "Azona (Zona) Landry, wife of Duprelie Boudreaux and your maternal grandmother, has not been confirmed in any public record beyond Learly's obituary. Searching FamilySearch (familysearch.org \u2014 free) for 'Arthur Boudreaux + Eumea Broussard' or 'Duprelie Boudreaux + Azona Landry' should surface this tree. If Azona was from the same Landry line as your father, cousin marriage is confirmed." },
-  { title: "Duprelie Boudreaux's death certificate", text: "A death certificate from the Louisiana State Archives would name Duprelie's parents and confirm his birth date. Contact: Louisiana State Archives, Phone (225) 922-1208. Also: Our Lady of Lourdes Church, Erath (David Funeral Home, 209 E. Putnam St., Erath \u2014 (337) 937-0405) may have burial records." },
-  { title: "Duprelie Boudreaux's baptism record", text: "St. Mary Magdalen Church, Abbeville \u2014 phone (337) 893-0244 \u2014 would hold his baptism record naming both parents. This would definitively confirm Arthur and Eumea as his parents (already confirmed by Tommy Langlinais, but a church record would be the gold-standard primary source)." },
-  { title: "Maximilien Landry's parents", text: "Maximilien Landry (father of Joseph Theolin) is confirmed, but his parents have not been identified. Searching Southwest Louisiana Records (H\u00e9bert CD #101) for 'Maximilien Landry' married to 'Marcelite Trahan' would be the first step." },
-  { title: "Phil\u00e9mon dit Edmond's parentage", text: "Phil\u00e9mon dit Edmond Boudreaux (b. Apr 1798) is placed in Leufroi's line based on strong circumstantial evidence from the Acadians in Gray database, but a direct church record naming his parents would confirm this. St. Martinville church records from 1798\u20131820 would be the source." },
-  { title: "Visit the Wall of Names in Person", text: "The Acadian Memorial in St. Martinville, LA has your ancestors Abraham Landry and Pierre 'Pierrot \u00e0 Jacques' Landry on the bronze Wall of Names. Visitors can make rubbings of the names. Address: 121 S. New Market St., St. Martinville, LA 70582. Phone: (337) 394-2258. Open to the public." },
+  { title: "Azona Landry's parentage — HIGHEST PRIORITY", text: "Azona (Zona) Landry, wife of Duprelie Boudreaux and your maternal grandmother, has not been confirmed in any public record beyond Learly's obituary. Searching FamilySearch (familysearch.org — free) for 'Arthur Boudreaux + Eumea Broussard' or 'Duprelie Boudreaux + Azona Landry' should surface this tree. If Azona was from the same Landry line as your father, cousin marriage is confirmed." },
+  { title: "Duprelie Boudreaux's death certificate", text: "A death certificate from the Louisiana State Archives would name Duprelie's parents and confirm his birth date. Contact: Louisiana State Archives, Phone (225) 922-1208. Also: Our Lady of Lourdes Church, Erath (David Funeral Home, 209 E. Putnam St., Erath — (337) 937-0405) may have burial records." },
+  { title: "Duprelie Boudreaux's baptism record", text: "St. Mary Magdalen Church, Abbeville — phone (337) 893-0244 — would hold his baptism record naming both parents. This would definitively confirm Arthur and Eumea as his parents (already confirmed by Tommy Langlinais, but a church record would be the gold-standard primary source)." },
+  { title: "Maximilien Landry's parents", text: "Maximilien Landry (father of Joseph Theolin) is confirmed, but his parents have not been identified. Searching Southwest Louisiana Records (Hébert CD #101) for 'Maximilien Landry' married to 'Marcelite Trahan' would be the first step." },
+  { title: "Philémon dit Edmond's parentage", text: "Philémon dit Edmond Boudreaux (b. Apr 1798) is placed in Leufroi's line based on strong circumstantial evidence from the Acadians in Gray database, but a direct church record naming his parents would confirm this. St. Martinville church records from 1798–1820 would be the source." },
+  { title: "Visit the Wall of Names in Person", text: "The Acadian Memorial in St. Martinville, LA has your ancestors Abraham Landry and Pierre 'Pierrot à Jacques' Landry on the bronze Wall of Names. Visitors can make rubbings of the names. Address: 121 S. New Market St., St. Martinville, LA 70582. Phone: (337) 394-2258. Open to the public." },
 ];
 
-/* =====================================================
-   RENDER HELPERS
-===================================================== */
+// ── RENDER ────────────────────────────────────────────────────────────────
+
 function badgeHtml(badge) {
   if (!badge) return '';
   const map = {
-    patriarch: ['badge-patriarch','Patriarche'],
-    wall:      ['badge-wall','\u2605 Wall of Names'],
-    you:       ['badge-you','Votre Ligne'],
-    exile:     ['badge-exile','Exil\u00e9'],
+    patriarch: ['badge-patriarch','Patriarch'],
+    wall: ['badge-wall','★ Wall of Names'],
+    you: ['badge-you','Your Line'],
+    exile: ['badge-exile','Exile'],
+    ancestor: ['badge-ancestor','12th Generation'],
   };
   const [cls, label] = map[badge];
   return `<span class="person-badge ${cls}">${label}</span>`;
 }
 
-function buildCard(person, dataset, idx) {
-  const cleanName = person.name.replace(' \u2605 Wall of Names','');
-  const badge = badgeHtml(person.badge);
-  const badgeRow = badge ? `<div style="margin-bottom:0.5rem;">${badge}</div>` : '';
-  return `<div class="person-card ${person.accent}-accent${person.badge==='you'?' highlighted':''}" data-dataset="${dataset}" data-idx="${idx}">
-    ${badgeRow}
-    <div class="person-name">${cleanName}</div>
-    <div class="person-dates">${person.dates}</div>
-    <div class="person-location">${person.location}</div>
-  </div>`;
+function buildCard(person, idx) {
+  return `
+    <div class="person-card ${person.accent}-accent ${person.badge==='you'?'highlighted':''}"
+         onclick="showPerson(${idx}, '${person.name.replace(/'/g,"\\'")}')">
+      ${badgeHtml(person.badge)}
+      <div class="person-name">${person.name.replace(' ★ Wall of Names','')}</div>
+      <div class="person-dates">${person.dates}</div>
+      <div class="person-location">${person.location}</div>
+    </div>`;
 }
 
-function renderTree(containerId, people, dataset, extra) {
+function renderTree(containerId, people, extra) {
   const container = document.getElementById(containerId);
   let html = '';
   let lastGen = null;
+
   people.forEach((p, i) => {
-    const gs = String(p.gen);
-    if (gs !== lastGen) {
-      if (lastGen !== null) html += `</div></div><div class="connector-down"></div>`;
-      const yr = p.year ? ` \u00b7 ${p.year}` : '';
-      html += `<div class="generation"><div class="gen-label"><span class="fleur-sep">&#x269C;</span> G\u00e9n\u00e9ration ${gs}${yr}</div><div class="person-cards-row">`;
-      lastGen = gs;
+    const genStr = String(p.gen);
+    if (genStr !== lastGen) {
+      if (lastGen !== null) html += `</div><div class="connector-down"></div>`;
+      const yearLabel = p.year ? `· ${p.year}` : '';
+      html += `<div class="generation"><div class="gen-label">Generation ${genStr} ${yearLabel}</div><div class="person-cards-row">`;
+      lastGen = genStr;
     }
-    html += buildCard(p, dataset, i);
+    html += buildCard(p, i);
   });
   if (lastGen !== null) html += `</div></div>`;
+
   if (extra) {
-    html += `<div class="connector-down"></div><div class="generation"><div class="gen-label"><span class="fleur-sep">&#x269C;</span> G\u00e9n\u00e9ration ${extra.gen}</div><div class="person-cards-row">`;
-    html += buildCard(extra, 'learly', -1);
+    html += `<div class="connector-down"></div><div class="generation"><div class="gen-label">Generation ${extra.gen}</div><div class="person-cards-row">`;
+    html += buildCard(extra, -1);
     html += `</div></div>`;
   }
+
   container.innerHTML = html;
 }
 
 function renderConnections() {
-  document.getElementById('connections-list').innerHTML = connections.map(c =>
-    `<div class="connection-item"><h4>${c.title}</h4><p>${c.text}</p></div>`
-  ).join('');
+  const el = document.getElementById('connections-list');
+  el.innerHTML = connections.map(c => `
+    <div class="connection-item">
+      <h4>${c.title}</h4>
+      <p>${c.text}</p>
+    </div>`).join('');
 }
 
 function renderSources() {
-  document.getElementById('sources-grid').innerHTML = sources.map(s =>
-    `<div class="source-card"><h4>${s.title}</h4><p>${s.text}</p></div>`
-  ).join('');
-  document.getElementById('open-questions').innerHTML = openQuestions.map((q,i) =>
-    `<div class="open-q-item">
-       <div class="oq-title">${i+1}. ${q.title}</div>
-       <p>${q.text}</p>
-     </div>`
-  ).join('');
+  const grid = document.getElementById('sources-grid');
+  grid.innerHTML = sources.map(s => `
+    <div class="source-card">
+      <h4>${s.title}</h4>
+      <p>${s.text}</p>
+    </div>`).join('');
+
+  const oq = document.getElementById('open-questions');
+  oq.innerHTML = openQuestions.map((q,i) => `
+    <div style="margin-bottom:1rem;">
+      <div style="font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--rust);margin-bottom:0.35rem;">${i+1}. ${q.title}</div>
+      <p style="font-size:0.96rem;line-height:1.7;color:var(--ink-light);">${q.text}</p>
+    </div>`).join('');
 }
 
-/* =====================================================
-   TABS
-===================================================== */
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
-    btn.classList.add('active');
-  });
-});
+// ── TABS ──────────────────────────────────────────────────────────────────
 
-/* =====================================================
-   MODAL
-===================================================== */
-function getPerson(dataset, idx) {
-  if (dataset === 'learly') return learly;
-  if (dataset === 'boudreaux') return boudreaux[idx];
-  return landry[idx];
+function showTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.target.classList.add('active');
 }
 
-function showPerson(dataset, idx) {
-  const person = getPerson(dataset, idx);
-  document.getElementById('modal-name').textContent = person.name.replace(' \u2605 Wall of Names','');
+// ── MODAL ─────────────────────────────────────────────────────────────────
+
+let currentData = null;
+
+function showPerson(idx, name) {
+  const isBoudreaux = document.getElementById('tab-boudreaux').classList.contains('active');
+  let person;
+  if (idx === -1) {
+    person = learly;
+  } else if (isBoudreaux) {
+    person = boudreaux[idx];
+  } else {
+    person = landry[idx];
+  }
+  currentData = person;
+
+  document.getElementById('modal-name').textContent = person.name.replace(' ★ Wall of Names','');
   document.getElementById('modal-dates').textContent = person.dates;
+
   let body = '';
   person.fields.forEach(([label, value]) => {
     body += `<div class="detail-row"><span class="detail-label">${label}</span><span class="detail-value">${value}</span></div>`;
   });
-  if (person.spouse && person.spouse !== '\u2014') {
-    body += `<hr class="detail-divider"><div class="detail-row"><span class="detail-label">\u00c9poux/\u00c9pouse</span><span class="detail-value">${person.spouse}</span></div>`;
+
+  if (person.spouse && person.spouse !== '—') {
+    body += `<hr class="detail-divider"><div class="detail-row"><span class="detail-label">Spouse</span><span class="detail-value">${person.spouse}</span></div>`;
   }
+
   if (person.badge === 'wall') {
-    body += `<div class="wall-badge-modal">&#x2605; Honor\u00e9(e) \u2014 Acadian Memorial, St. Martinville, LA</div>`;
+    body += `<div class="wall-badge-modal">★ Honored on the Wall of Names — Acadian Memorial, St. Martinville, LA</div>`;
   }
+
   if (person.note) {
     body += `<div class="detail-note">${person.note}</div>`;
   }
+
   document.getElementById('modal-body').innerHTML = body;
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
-function closeModal() {
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) {
+    closeModalBtn();
+  }
+}
+
+function closeModalBtn() {
   document.getElementById('modal-overlay').classList.remove('open');
   document.body.style.overflow = '';
 }
 
-['boudreaux-tree','landry-tree'].forEach(id => {
-  document.getElementById(id).addEventListener('click', e => {
-    const card = e.target.closest('.person-card');
-    if (!card) return;
-    showPerson(card.dataset.dataset, parseInt(card.dataset.idx));
-  });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModalBtn();
 });
 
-document.getElementById('modal-overlay').addEventListener('click', e => {
-  if (e.target === document.getElementById('modal-overlay')) closeModal();
-});
-document.getElementById('modal-close-btn').addEventListener('click', closeModal);
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-/* =====================================================
-   INIT
-===================================================== */
-renderTree('boudreaux-tree', boudreaux, 'boudreaux', learly);
-renderTree('landry-tree', landry, 'landry', null);
+// ── INIT ──────────────────────────────────────────────────────────────────
+renderTree('boudreaux-tree', boudreaux, learly);
+renderTree('landry-tree', landry, null);
 renderConnections();
 renderSources();
+
+// Clicking on "Branch" generation cards in the Landry tree
+document.getElementById('landry-tree').addEventListener('click', function(e) {
+  const card = e.target.closest('.person-card');
+  if (!card) return;
+  const onclick = card.getAttribute('onclick');
+  if (onclick && onclick.includes('-1')) {
+    showPerson(-1, '');
+  }
+});
 </script>
 </body>
 </html>
